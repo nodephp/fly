@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB4B629D16A519C5007B1754 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B629216A519C5007B1754 /* bg.png */; };
+		CB4B629E16A519C5007B1754 /* butlet.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B629316A519C5007B1754 /* butlet.png */; };
+		CB4B629F16A519C5007B1754 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B629416A519C5007B1754 /* CloseNormal.png */; };
+		CB4B62A016A519C5007B1754 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B629516A519C5007B1754 /* CloseSelected.png */; };
+		CB4B62A116A519C5007B1754 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B629616A519C5007B1754 /* Default.png */; };
+		CB4B62A216A519C5007B1754 /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B629716A519C5007B1754 /* enemy.png */; };
+		CB4B62A316A519C5007B1754 /* flight.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B629816A519C5007B1754 /* flight.png */; };
+		CB4B62A416A519C5007B1754 /* font01.fnt in Resources */ = {isa = PBXBuildFile; fileRef = CB4B629916A519C5007B1754 /* font01.fnt */; };
+		CB4B62A516A519C5007B1754 /* font01.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B629A16A519C5007B1754 /* font01.png */; };
+		CB4B62A616A519C5007B1754 /* font09.fnt in Resources */ = {isa = PBXBuildFile; fileRef = CB4B629B16A519C5007B1754 /* font09.fnt */; };
+		CB4B62A716A519C5007B1754 /* font09.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B629C16A519C5007B1754 /* font09.png */; };
 		CB684BD016A3D3010007B9AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB684BCF16A3D3000007B9AA /* QuartzCore.framework */; };
 		CB684BD216A3D3010007B9AA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB684BD116A3D3010007B9AA /* OpenGLES.framework */; };
 		CB684BD416A3D3010007B9AA /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB684BD316A3D3010007B9AA /* OpenAL.framework */; };
@@ -220,6 +231,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB4B629216A519C5007B1754 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = Resources/bg.png; sourceTree = "<group>"; };
+		CB4B629316A519C5007B1754 /* butlet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = butlet.png; path = Resources/butlet.png; sourceTree = "<group>"; };
+		CB4B629416A519C5007B1754 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CloseNormal.png; path = Resources/CloseNormal.png; sourceTree = "<group>"; };
+		CB4B629516A519C5007B1754 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CloseSelected.png; path = Resources/CloseSelected.png; sourceTree = "<group>"; };
+		CB4B629616A519C5007B1754 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
+		CB4B629716A519C5007B1754 /* enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enemy.png; path = Resources/enemy.png; sourceTree = "<group>"; };
+		CB4B629816A519C5007B1754 /* flight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flight.png; path = Resources/flight.png; sourceTree = "<group>"; };
+		CB4B629916A519C5007B1754 /* font01.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = font01.fnt; path = Resources/font01.fnt; sourceTree = "<group>"; };
+		CB4B629A16A519C5007B1754 /* font01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = font01.png; path = Resources/font01.png; sourceTree = "<group>"; };
+		CB4B629B16A519C5007B1754 /* font09.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = font09.fnt; path = Resources/font09.fnt; sourceTree = "<group>"; };
+		CB4B629C16A519C5007B1754 /* font09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = font09.png; path = Resources/font09.png; sourceTree = "<group>"; };
 		CB684BCB16A3D3000007B9AA /* attack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = attack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB684BCF16A3D3000007B9AA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CB684BD116A3D3010007B9AA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -739,6 +761,17 @@
 		CB684BE016A3D3010007B9AA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CB4B629216A519C5007B1754 /* bg.png */,
+				CB4B629316A519C5007B1754 /* butlet.png */,
+				CB4B629416A519C5007B1754 /* CloseNormal.png */,
+				CB4B629516A519C5007B1754 /* CloseSelected.png */,
+				CB4B629616A519C5007B1754 /* Default.png */,
+				CB4B629716A519C5007B1754 /* enemy.png */,
+				CB4B629816A519C5007B1754 /* flight.png */,
+				CB4B629916A519C5007B1754 /* font01.fnt */,
+				CB4B629A16A519C5007B1754 /* font01.png */,
+				CB4B629B16A519C5007B1754 /* font09.fnt */,
+				CB4B629C16A519C5007B1754 /* font09.png */,
 				CB684E9E16A435890007B9AA /* enemy.png */,
 				CB684E9C16A432760007B9AA /* me.png */,
 				CB684E9A16A4282C0007B9AA /* butlet.png */,
@@ -1660,6 +1693,17 @@
 				CB684E9B16A4282C0007B9AA /* butlet.png in Resources */,
 				CB684E9D16A432760007B9AA /* me.png in Resources */,
 				CB684E9F16A435890007B9AA /* enemy.png in Resources */,
+				CB4B629D16A519C5007B1754 /* bg.png in Resources */,
+				CB4B629E16A519C5007B1754 /* butlet.png in Resources */,
+				CB4B629F16A519C5007B1754 /* CloseNormal.png in Resources */,
+				CB4B62A016A519C5007B1754 /* CloseSelected.png in Resources */,
+				CB4B62A116A519C5007B1754 /* Default.png in Resources */,
+				CB4B62A216A519C5007B1754 /* enemy.png in Resources */,
+				CB4B62A316A519C5007B1754 /* flight.png in Resources */,
+				CB4B62A416A519C5007B1754 /* font01.fnt in Resources */,
+				CB4B62A516A519C5007B1754 /* font01.png in Resources */,
+				CB4B62A616A519C5007B1754 /* font09.fnt in Resources */,
+				CB4B62A716A519C5007B1754 /* font09.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1978,6 +2022,7 @@
 				CB684E8716A3D3040007B9AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
