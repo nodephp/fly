@@ -18,6 +18,7 @@
 		CB4B62A516A519C5007B1754 /* font01.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B629A16A519C5007B1754 /* font01.png */; };
 		CB4B62A616A519C5007B1754 /* font09.fnt in Resources */ = {isa = PBXBuildFile; fileRef = CB4B629B16A519C5007B1754 /* font09.fnt */; };
 		CB4B62A716A519C5007B1754 /* font09.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B629C16A519C5007B1754 /* font09.png */; };
+		CB57338016A5F31200EF29A7 /* dragon_01.png in Resources */ = {isa = PBXBuildFile; fileRef = CB57337F16A5F31200EF29A7 /* dragon_01.png */; };
 		CB684BD016A3D3010007B9AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB684BCF16A3D3000007B9AA /* QuartzCore.framework */; };
 		CB684BD216A3D3010007B9AA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB684BD116A3D3010007B9AA /* OpenGLES.framework */; };
 		CB684BD416A3D3010007B9AA /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB684BD316A3D3010007B9AA /* OpenAL.framework */; };
@@ -218,10 +219,13 @@
 		CB684E7616A3D3040007B9AA /* HttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB684E7516A3D3040007B9AA /* HttpClient.cpp */; };
 		CB684E7F16A3D3040007B9AA /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB684E7E16A3D3040007B9AA /* AppDelegate.cpp */; };
 		CB684E8216A3D3040007B9AA /* game_bj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB684E8116A3D3040007B9AA /* game_bj.cpp */; };
-		CB8D192B16A54920006F5CAC /* Space.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8D192A16A54920006F5CAC /* Space.png */; };
 		CB8D193016A5492A006F5CAC /* butlet.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8D192D16A5492A006F5CAC /* butlet.png */; };
 		CB8D193116A5492A006F5CAC /* me.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8D192E16A5492A006F5CAC /* me.png */; };
 		CB8D193216A5492A006F5CAC /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8D192F16A5492A006F5CAC /* enemy.png */; };
+		CB8D194216A555DB006F5CAC /* Space3.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8D194116A555DB006F5CAC /* Space3.png */; };
+		CB8D194416A559B3006F5CAC /* sunny_01.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8D194316A559B3006F5CAC /* sunny_01.png */; };
+		CB8D194716A55AA2006F5CAC /* Space1.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8D194616A55AA2006F5CAC /* Space1.png */; };
+		CB8D194916A55C23006F5CAC /* sunny_01.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB8D194816A55C23006F5CAC /* sunny_01.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -236,6 +240,7 @@
 		CB4B629A16A519C5007B1754 /* font01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = font01.png; path = Resources/font01.png; sourceTree = "<group>"; };
 		CB4B629B16A519C5007B1754 /* font09.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = font09.fnt; path = Resources/font09.fnt; sourceTree = "<group>"; };
 		CB4B629C16A519C5007B1754 /* font09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = font09.png; path = Resources/font09.png; sourceTree = "<group>"; };
+		CB57337F16A5F31200EF29A7 /* dragon_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dragon_01.png; path = "../../../../../Downloads/Dragon FlightDragonFlight.app/character/dragon_01.png"; sourceTree = "<group>"; };
 		CB684BCB16A3D3000007B9AA /* attack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = attack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB684BCF16A3D3000007B9AA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CB684BD116A3D3010007B9AA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -678,10 +683,13 @@
 		CB684E8116A3D3040007B9AA /* game_bj.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = game_bj.cpp; path = Classes/game_bj.cpp; sourceTree = "<group>"; };
 		CB8D18FD16A5335A006F5CAC /* UserDefault.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = UserDefault.xml; sourceTree = "<group>"; };
 		CB8D190316A53E7A006F5CAC /* me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = me.png; sourceTree = "<group>"; };
-		CB8D192A16A54920006F5CAC /* Space.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Space.png; path = ../../../../../Desktop/ZYG002/Resources/Space.png; sourceTree = "<group>"; };
 		CB8D192D16A5492A006F5CAC /* butlet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = butlet.png; path = ../../../../../Desktop/butlet.png; sourceTree = "<group>"; };
 		CB8D192E16A5492A006F5CAC /* me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = me.png; path = ../../../../../Desktop/me.png; sourceTree = "<group>"; };
 		CB8D192F16A5492A006F5CAC /* enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enemy.png; path = ../../../../../Desktop/enemy.png; sourceTree = "<group>"; };
+		CB8D194116A555DB006F5CAC /* Space3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Space3.png; path = "../../../../../Downloads/Dragon FlightDragonFlight.app/background/Space3.png"; sourceTree = "<group>"; };
+		CB8D194316A559B3006F5CAC /* sunny_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunny_01.png; sourceTree = "<group>"; };
+		CB8D194616A55AA2006F5CAC /* Space1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Space1.png; path = "../../../../../Downloads/Dragon FlightDragonFlight.app/background/Space1.png"; sourceTree = "<group>"; };
+		CB8D194816A55C23006F5CAC /* sunny_01.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sunny_01.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -751,10 +759,13 @@
 		CB684BE016A3D3010007B9AA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CB57337F16A5F31200EF29A7 /* dragon_01.png */,
+				CB8D194616A55AA2006F5CAC /* Space1.png */,
+				CB8D194316A559B3006F5CAC /* sunny_01.png */,
+				CB8D194116A555DB006F5CAC /* Space3.png */,
 				CB8D192D16A5492A006F5CAC /* butlet.png */,
 				CB8D192E16A5492A006F5CAC /* me.png */,
 				CB8D192F16A5492A006F5CAC /* enemy.png */,
-				CB8D192A16A54920006F5CAC /* Space.png */,
 				CB8D190316A53E7A006F5CAC /* me.png */,
 				CB8D18FD16A5335A006F5CAC /* UserDefault.xml */,
 				CB4B629216A519C5007B1754 /* bg.png */,
@@ -780,6 +791,7 @@
 				CB684BF316A3D3010007B9AA /* Icon@2x.png */,
 				CB684BF516A3D3010007B9AA /* iTunesArtwork */,
 				CB684BF716A3D3010007B9AA /* Info.plist */,
+				CB8D194816A55C23006F5CAC /* sunny_01.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1680,10 +1692,14 @@
 				CB4B62A516A519C5007B1754 /* font01.png in Resources */,
 				CB4B62A616A519C5007B1754 /* font09.fnt in Resources */,
 				CB4B62A716A519C5007B1754 /* font09.png in Resources */,
-				CB8D192B16A54920006F5CAC /* Space.png in Resources */,
 				CB8D193016A5492A006F5CAC /* butlet.png in Resources */,
 				CB8D193116A5492A006F5CAC /* me.png in Resources */,
 				CB8D193216A5492A006F5CAC /* enemy.png in Resources */,
+				CB8D194216A555DB006F5CAC /* Space3.png in Resources */,
+				CB8D194416A559B3006F5CAC /* sunny_01.png in Resources */,
+				CB8D194716A55AA2006F5CAC /* Space1.png in Resources */,
+				CB8D194916A55C23006F5CAC /* sunny_01.plist in Resources */,
+				CB57338016A5F31200EF29A7 /* dragon_01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
