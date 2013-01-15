@@ -4,6 +4,8 @@
 using namespace cocos2d;
 using namespace CocosDenshion;
 
+
+
 CCScene* game_bj::scene()
 {
     CCScene *scene = CCScene::create();
@@ -20,30 +22,31 @@ bool game_bj::init()
     {
         return false;
     }
-    CCUserDefault::sharedUserDefault()->setIntegerForKey("a", 1);
-    CCUserDefault::sharedUserDefault()->flush();
-    CCUserDefault::sharedUserDefault()->setIntegerForKey("b", 1);
-    CCUserDefault::sharedUserDefault()->flush();
-    CCUserDefault::sharedUserDefault()->setIntegerForKey("c", 1);
-    CCUserDefault::sharedUserDefault()->flush();
-    CCUserDefault::sharedUserDefault()->setIntegerForKey("d", 1);
-    CCUserDefault::sharedUserDefault()->flush();
-    CCUserDefault::sharedUserDefault()->setIntegerForKey("e", 1);
-    CCUserDefault::sharedUserDefault()->flush();
-    CCUserDefault::sharedUserDefault()->setIntegerForKey("f", 1);
-    CCUserDefault::sharedUserDefault()->flush();
-    CCUserDefault::sharedUserDefault()->setIntegerForKey("g", 1);
-    CCUserDefault::sharedUserDefault()->flush();
-    CCUserDefault::sharedUserDefault()->setIntegerForKey("h", 1);
-    CCUserDefault::sharedUserDefault()->flush();
-    CCUserDefault::sharedUserDefault()->setIntegerForKey("i", 1);
-    CCUserDefault::sharedUserDefault()->flush();
-    CCUserDefault::sharedUserDefault()->setIntegerForKey("j", 1);
-    CCUserDefault::sharedUserDefault()->flush();
-    CCUserDefault::sharedUserDefault()->setIntegerForKey("k", 1);
-    CCUserDefault::sharedUserDefault()->flush();
-    CCUserDefault::sharedUserDefault()->setIntegerForKey("l", 1);
-    CCUserDefault::sharedUserDefault()->flush();
+    
+//    CCUserDefault::sharedUserDefault()->setIntegerForKey("a", 1);
+//    CCUserDefault::sharedUserDefault()->flush();
+//    CCUserDefault::sharedUserDefault()->setIntegerForKey("b", 1);
+//    CCUserDefault::sharedUserDefault()->flush();
+//    CCUserDefault::sharedUserDefault()->setIntegerForKey("c", 1);
+//    CCUserDefault::sharedUserDefault()->flush();
+//    CCUserDefault::sharedUserDefault()->setIntegerForKey("d", 1);
+//    CCUserDefault::sharedUserDefault()->flush();
+//    CCUserDefault::sharedUserDefault()->setIntegerForKey("e", 1);
+//    CCUserDefault::sharedUserDefault()->flush();
+//    CCUserDefault::sharedUserDefault()->setIntegerForKey("f", 1);
+//    CCUserDefault::sharedUserDefault()->flush();
+//    CCUserDefault::sharedUserDefault()->setIntegerForKey("g", 1);
+//    CCUserDefault::sharedUserDefault()->flush();
+//    CCUserDefault::sharedUserDefault()->setIntegerForKey("h", 1);
+//    CCUserDefault::sharedUserDefault()->flush();
+//    CCUserDefault::sharedUserDefault()->setIntegerForKey("i", 1);
+//    CCUserDefault::sharedUserDefault()->flush();
+//    CCUserDefault::sharedUserDefault()->setIntegerForKey("j", 1);
+//    CCUserDefault::sharedUserDefault()->flush();
+//    CCUserDefault::sharedUserDefault()->setIntegerForKey("k", 1);
+//    CCUserDefault::sharedUserDefault()->flush();
+//    CCUserDefault::sharedUserDefault()->setIntegerForKey("l", 1);
+//    CCUserDefault::sharedUserDefault()->flush();
 
     
     bool bRet = false;
@@ -120,7 +123,7 @@ void game_bj::update(float dt)
         float temp = map_1p.y + 480;
         m_map2->setPosition(ccp(map_2p.x, temp));
     }
-}  
+}
 
 
 
@@ -207,52 +210,64 @@ void game_bj::auto_pz(char id)
             this->removeChild(sprinte_xxx, true);
             if(ii==101)
             {
-                CCUserDefault::sharedUserDefault()->setIntegerForKey("a", 1);
-                CCUserDefault::sharedUserDefault()->flush();
+                game_bj::a=1;
+//                CCUserDefault::sharedUserDefault()->setIntegerForKey("a", 1);
+//                CCUserDefault::sharedUserDefault()->flush();
             }else if(ii==102)
             {
-                CCUserDefault::sharedUserDefault()->setIntegerForKey("b", 1);
-                CCUserDefault::sharedUserDefault()->flush();
+                game_bj::b=1;
+//                CCUserDefault::sharedUserDefault()->setIntegerForKey("b", 1);
+//                CCUserDefault::sharedUserDefault()->flush();
             }else if(ii==103)
             {
-                CCUserDefault::sharedUserDefault()->setIntegerForKey("c", 1);
-                CCUserDefault::sharedUserDefault()->flush();
+                game_bj::c=1;
+//                CCUserDefault::sharedUserDefault()->setIntegerForKey("c", 1);
+//                CCUserDefault::sharedUserDefault()->flush();
             }else if(ii==104)
             {
-                CCUserDefault::sharedUserDefault()->setIntegerForKey("d", 1);
-                CCUserDefault::sharedUserDefault()->flush();
+                game_bj::d=1;
+//                CCUserDefault::sharedUserDefault()->setIntegerForKey("d", 1);
+//                CCUserDefault::sharedUserDefault()->flush();
             }else if(ii==105)
             {
-                CCUserDefault::sharedUserDefault()->setIntegerForKey("e", 1);
-                CCUserDefault::sharedUserDefault()->flush();
+                game_bj::e=1;
+//                CCUserDefault::sharedUserDefault()->setIntegerForKey("e", 1);
+//                CCUserDefault::sharedUserDefault()->flush();
             }else if(ii==106)
             {
-                CCUserDefault::sharedUserDefault()->setIntegerForKey("f", 1);
-                CCUserDefault::sharedUserDefault()->flush();
+                game_bj::f=1;
+//                CCUserDefault::sharedUserDefault()->setIntegerForKey("f", 1);
+//                CCUserDefault::sharedUserDefault()->flush();
             }else if(ii==107)
             {
-                CCUserDefault::sharedUserDefault()->setIntegerForKey("g", 1);
-                CCUserDefault::sharedUserDefault()->flush();
+                game_bj::g=1;
+//                CCUserDefault::sharedUserDefault()->setIntegerForKey("g", 1);
+//                CCUserDefault::sharedUserDefault()->flush();
             }else if(ii==108)
             {
-                CCUserDefault::sharedUserDefault()->setIntegerForKey("h", 1);
-                CCUserDefault::sharedUserDefault()->flush();
+                game_bj::h=1;
+//                CCUserDefault::sharedUserDefault()->setIntegerForKey("h", 1);
+//                CCUserDefault::sharedUserDefault()->flush();
             }else if(ii==109)
             {
-                CCUserDefault::sharedUserDefault()->setIntegerForKey("i", 1);
-                CCUserDefault::sharedUserDefault()->flush();
+                game_bj::i=1;
+//                CCUserDefault::sharedUserDefault()->setIntegerForKey("i", 1);
+//                CCUserDefault::sharedUserDefault()->flush();
             }else if(ii==110)
             {
-                CCUserDefault::sharedUserDefault()->setIntegerForKey("j", 1);
-                CCUserDefault::sharedUserDefault()->flush();
+                game_bj::j=1;
+//                CCUserDefault::sharedUserDefault()->setIntegerForKey("j", 1);
+//                CCUserDefault::sharedUserDefault()->flush();
             }else if(ii==111)
             {
-                CCUserDefault::sharedUserDefault()->setIntegerForKey("k", 1);
-                CCUserDefault::sharedUserDefault()->flush();
+                game_bj::k=1;
+//                CCUserDefault::sharedUserDefault()->setIntegerForKey("k", 1);
+//                CCUserDefault::sharedUserDefault()->flush();
             }else if(ii==112)
             {
-                CCUserDefault::sharedUserDefault()->setIntegerForKey("l", 1);
-                CCUserDefault::sharedUserDefault()->flush();
+                game_bj::l=1;
+//                CCUserDefault::sharedUserDefault()->setIntegerForKey("l", 1);
+//                CCUserDefault::sharedUserDefault()->flush();
             }
         }
     }
@@ -329,122 +344,146 @@ void game_bj::shoot()
         {
             if(ii==1)
             {
-                float a = CCUserDefault::sharedUserDefault()->getIntegerForKey("a");
+//                float a = CCUserDefault::sharedUserDefault()->getIntegerForKey("a");
+                float a = game_bj::a;
                 if(a==1)
                 {
                     id = 101;
-                    CCUserDefault::sharedUserDefault()->setIntegerForKey("a", 2);
-                    CCUserDefault::sharedUserDefault()->flush();
+                    game_bj::a=2;
+//                    CCUserDefault::sharedUserDefault()->setIntegerForKey("a", 2);
+//                    CCUserDefault::sharedUserDefault()->flush();
                     break;
                 }
             }else if(ii==2)
             {
-                float b = CCUserDefault::sharedUserDefault()->getIntegerForKey("b");
+//                float b = CCUserDefault::sharedUserDefault()->getIntegerForKey("b");
+                float b = game_bj::b;
                 if(b==1)
                 {
                     id = 102;
-                    CCUserDefault::sharedUserDefault()->setIntegerForKey("b", 2);
-                    CCUserDefault::sharedUserDefault()->flush();
+                    game_bj::b=2;
+//                    CCUserDefault::sharedUserDefault()->setIntegerForKey("b", 2);
+//                    CCUserDefault::sharedUserDefault()->flush();
                     break;
                 }
             }else if(ii==3)
             {
-                float c = CCUserDefault::sharedUserDefault()->getIntegerForKey("c");
+//                float c = CCUserDefault::sharedUserDefault()->getIntegerForKey("c");
+                float c = game_bj::c;
                 if(c==1)
                 {
                     id = 103;
-                    CCUserDefault::sharedUserDefault()->setIntegerForKey("c", 2);
-                    CCUserDefault::sharedUserDefault()->flush();
+                    game_bj::c=2;
+//                    CCUserDefault::sharedUserDefault()->setIntegerForKey("c", 2);
+//                    CCUserDefault::sharedUserDefault()->flush();
                     break;
                 }
             }else if(ii==4)
             {
-                float d = CCUserDefault::sharedUserDefault()->getIntegerForKey("d");
+//                float d = CCUserDefault::sharedUserDefault()->getIntegerForKey("d");
+                float d = game_bj::d;
                 if(d==1)
                 {
                     id = 104;
-                    CCUserDefault::sharedUserDefault()->setIntegerForKey("d", 2);
-                    CCUserDefault::sharedUserDefault()->flush();
+                    game_bj::d=2;
+//                    CCUserDefault::sharedUserDefault()->setIntegerForKey("d", 2);
+//                    CCUserDefault::sharedUserDefault()->flush();
                     break;
                 }
             }else if(ii==5)
             {
-                float e = CCUserDefault::sharedUserDefault()->getIntegerForKey("e");
+//                float e = CCUserDefault::sharedUserDefault()->getIntegerForKey("e");
+                float e = game_bj::e;
                 if(e==1)
                 {
                     id = 105;
-                    CCUserDefault::sharedUserDefault()->setIntegerForKey("e", 2);
-                    CCUserDefault::sharedUserDefault()->flush();
+                    game_bj::e=2;
+//                    CCUserDefault::sharedUserDefault()->setIntegerForKey("e", 2);
+//                    CCUserDefault::sharedUserDefault()->flush();
                     break;
                 }
             }else if(ii==6)
             {
-                float f = CCUserDefault::sharedUserDefault()->getIntegerForKey("f");
+//                float f = CCUserDefault::sharedUserDefault()->getIntegerForKey("f");
+                float f = game_bj::f;
                 if(f==1)
                 {
                     id = 106;
-                    CCUserDefault::sharedUserDefault()->setIntegerForKey("f", 2);
-                    CCUserDefault::sharedUserDefault()->flush();
+                    game_bj::f=2;
+//                    CCUserDefault::sharedUserDefault()->setIntegerForKey("f", 2);
+//                    CCUserDefault::sharedUserDefault()->flush();
                     break;
                 }
             }else if(ii==7)
             {
-                float b = CCUserDefault::sharedUserDefault()->getIntegerForKey("g");
-                if(b==1)
+//                float b = CCUserDefault::sharedUserDefault()->getIntegerForKey("g");
+                float g = game_bj::g;
+                if(g==1)
                 {
                     id = 107;
-                    CCUserDefault::sharedUserDefault()->setIntegerForKey("g", 2);
-                    CCUserDefault::sharedUserDefault()->flush();
+                    game_bj::g=2;
+//                    CCUserDefault::sharedUserDefault()->setIntegerForKey("g", 2);
+//                    CCUserDefault::sharedUserDefault()->flush();
                     break;
                 }
             }else if(ii==8)
             {
-                float h = CCUserDefault::sharedUserDefault()->getIntegerForKey("h");
+//                float h = CCUserDefault::sharedUserDefault()->getIntegerForKey("h");
+                float h = game_bj::h;
                 if(h==1)
                 {
                     id = 108;
-                    CCUserDefault::sharedUserDefault()->setIntegerForKey("h", 2);
-                    CCUserDefault::sharedUserDefault()->flush();
+                    game_bj::h=2;
+//                    CCUserDefault::sharedUserDefault()->setIntegerForKey("h", 2);
+//                    CCUserDefault::sharedUserDefault()->flush();
                     break;
                 }
             }else if(ii==9)
             {
-                float i = CCUserDefault::sharedUserDefault()->getIntegerForKey("i");
+//                float i = CCUserDefault::sharedUserDefault()->getIntegerForKey("i");
+                float i = game_bj::i;
                 if(i==1)
                 {
                     id = 109;
-                    CCUserDefault::sharedUserDefault()->setIntegerForKey("i", 2);
-                    CCUserDefault::sharedUserDefault()->flush();
+                    game_bj::i=2;
+//                    CCUserDefault::sharedUserDefault()->setIntegerForKey("i", 2);
+//                    CCUserDefault::sharedUserDefault()->flush();
                     break;
                 }
             }else if(ii==10)
             {
-                float j = CCUserDefault::sharedUserDefault()->getIntegerForKey("j");
+//                float j = CCUserDefault::sharedUserDefault()->getIntegerForKey("j");
+                float j = game_bj::j;
                 if(j==1)
                 {
                     id = 110;
-                    CCUserDefault::sharedUserDefault()->setIntegerForKey("j", 2);
-                    CCUserDefault::sharedUserDefault()->flush();
+                    game_bj::j=2;
+//                    CCUserDefault::sharedUserDefault()->setIntegerForKey("j", 2);
+//                    CCUserDefault::sharedUserDefault()->flush();
                     break;
                 }
             }else if(ii==11)
             {
-                float k = CCUserDefault::sharedUserDefault()->getIntegerForKey("k");
+//                float k = CCUserDefault::sharedUserDefault()->getIntegerForKey("k");
+                float k = game_bj::k;
                 if(k==1)
                 {
                     id = 111;
-                    CCUserDefault::sharedUserDefault()->setIntegerForKey("k", 2);
-                    CCUserDefault::sharedUserDefault()->flush();
+                    game_bj::k=2;
+//                    CCUserDefault::sharedUserDefault()->setIntegerForKey("k", 2);
+//                    CCUserDefault::sharedUserDefault()->flush();
                     break;
                 }
             }else if(ii==12)
             {
-                float l = CCUserDefault::sharedUserDefault()->getIntegerForKey("l");
+//                float l = CCUserDefault::sharedUserDefault()->getIntegerForKey("l");
+                float l = game_bj::l;
                 if(l==1)
                 {
                     id = 112;
-                    CCUserDefault::sharedUserDefault()->setIntegerForKey("l", 2);
-                    CCUserDefault::sharedUserDefault()->flush();
+                    game_bj::l=2;
+//                    CCUserDefault::sharedUserDefault()->setIntegerForKey("l", 2);
+//                    CCUserDefault::sharedUserDefault()->flush();
                     break;
                 }
             }

@@ -7,6 +7,22 @@ class game_bj : public cocos2d::CCLayer
 {
 public:
     virtual bool init();
+    
+    
+    
+    int a=1;
+    int b=1;
+    int c=1;
+    int d=1;
+    int e=1;
+    int f=1;
+    int g=1;
+    int h=1;
+    int i=1;
+    int j=1;
+    int k=1;
+    int l=1;
+    
 
     static cocos2d::CCScene* scene();
     void update(float dt);
@@ -16,7 +32,7 @@ public:
     void listen();
     void shoot();
     void enemy();
-
+    
     
     void registerWithTouchDispatcher();
     
@@ -32,7 +48,8 @@ public:
     CREATE_FUNC(game_bj);
 
 protected:
-	cocos2d::CCSize s ;
+	
+    cocos2d::CCSize s ;
 	cocos2d::CCSprite *m_map1;
 	cocos2d::CCSprite *m_map2;
     //	cocos2d::CCSpriteFrameCache* cache;
