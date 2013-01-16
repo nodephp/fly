@@ -23,24 +23,7 @@ bool game_bj::init()
         return false;
     }
     
-//    //逐渐显示一个图片的动作，第二个参数是百分比
-//    CCProgressTo *to1 = CCProgressTo::actionWithDuration(2, 100);
-//    CCProgressTo *to2 = CCProgressTo::actionWithDuration(2, 100);
-//    
-//    //建立CCProgressTimer对象，利用文件PathSister
-//    CCProgressTimer *left = CCProgressTimer::progressWithFile(s_pPathSister1);
-//    
-//    //顺时针旋转
-//    left->setType( kCCProgressTimerTypeRadialCW );
-//    //逆时针旋转
-//    //left->setType( kCCProgressTimerTypeRadialCCW );
-//    //水平的从左到右：kCCProgressTimerTypeHorizontalBarLR
-//    //水平的从右到左：kCCProgressTimerTypeHorizontalBarRL
-//    //垂直的从下往上：kCCProgressTimerTypeVerticalBarBT
-//    //垂直的从上往下：kCCProgressTimerTypeVerticalBarTB
-//    addChild(left);
-//    left->setPosition(CCPointMake(100, s.height/2));
-//    left->runAction( CCRepeatForever::actionWithAction(to1));
+
     
     bool bRet = false;
     do
@@ -74,23 +57,28 @@ bool game_bj::init()
     pMyself->initWithFile("sunny_01.png");
     pMyself->setTextureRect(CCRectMake(0, 0, 45, 110));
     pMyself->setPosition( ccp(100, 50) );
+    pMyself->setScale(game_bj::scale);
     this->addChild(pMyself, 0,5);
     
     CCSprite *pMyself_wind_a = new CCSprite();
     pMyself_wind_a->initWithFile("sunny_01.png");
     pMyself_wind_a->setTextureRect(CCRectMake(45, 0, 100, 60));
-    pMyself_wind_a->setPosition( ccp(65, 40) );
+    pMyself_wind_a->setPosition( ccp(85, 40) );
+    pMyself_wind_a->setScale(game_bj::scale);
     this->addChild(pMyself_wind_a, 0,6);
     
     CCSprite *pMyself_wind_b = new CCSprite();
     pMyself_wind_b->initWithFile("sunny_01.png");
     pMyself_wind_b->setTextureRect(CCRectMake(45, 0, 100, 60));
     pMyself_wind_b->setFlipX(true);
-    pMyself_wind_b->setPosition( ccp(130, 40) );
+    pMyself_wind_b->setPosition( ccp(112, 40) );
+    pMyself_wind_b->setScale(game_bj::scale);
     this->addChild(pMyself_wind_b, 0,7);
     
     
+    
 
+    
 //    CCArray* framesList = CCArray::create();
 //    framesList->addObject(CCSpriteFrame::create("sunny_01.png", CCRectMake(45, 0, 100, 60)));
 //    framesList->addObject(CCSpriteFrame::create("sunny_01.png", CCRectMake(40, 0, 20, 40)));
@@ -127,6 +115,10 @@ bool game_bj::init()
     
     pMyself_wind_a->runAction(rep1);
     pMyself_wind_b->runAction(rep2);
+    
+    
+
+    
     
     
     auto_enemy('yyy');
@@ -175,7 +167,6 @@ void game_bj::auto_bullet(int x, int y, char id)
     auto_bullet->initWithFile("butlet.png");
     auto_bullet->setPosition( ccp(x, y) );
     this->addChild(auto_bullet, 0, id);
-//    CCSprite *sprinte_temp = (CCSprite*)getChildByTag(id);
     CCFiniteTimeAction *action = CCMoveTo::create(1,ccp(x,490));
     auto_bullet->runAction(action);
 }
@@ -188,26 +179,31 @@ void game_bj::auto_pz(char id)
     CCSprite *sprinte_12 = (CCSprite*)getChildByTag(12);
     CCSprite *sprinte_13 = (CCSprite*)getChildByTag(13);
     CCSprite *sprinte_14 = (CCSprite*)getChildByTag(14);
+    CCSprite *sprinte_15 = (CCSprite*)getChildByTag(15);
     
     CCSprite *sprinte_11_a = (CCSprite*)getChildByTag(21);
     CCSprite *sprinte_12_a = (CCSprite*)getChildByTag(22);
     CCSprite *sprinte_13_a = (CCSprite*)getChildByTag(23);
     CCSprite *sprinte_14_a = (CCSprite*)getChildByTag(24);
+    CCSprite *sprinte_15_a = (CCSprite*)getChildByTag(25);
     
     CCSprite *sprinte_11_b = (CCSprite*)getChildByTag(31);
     CCSprite *sprinte_12_b = (CCSprite*)getChildByTag(32);
     CCSprite *sprinte_13_b = (CCSprite*)getChildByTag(33);
     CCSprite *sprinte_14_b = (CCSprite*)getChildByTag(34);
+    CCSprite *sprinte_15_b = (CCSprite*)getChildByTag(35);
     
     CCSprite *sprinte_11_y_a = (CCSprite*)getChildByTag(41);
     CCSprite *sprinte_12_y_a = (CCSprite*)getChildByTag(42);
     CCSprite *sprinte_13_y_a = (CCSprite*)getChildByTag(43);
     CCSprite *sprinte_14_y_a = (CCSprite*)getChildByTag(44);
+    CCSprite *sprinte_15_y_a = (CCSprite*)getChildByTag(45);
     
     CCSprite *sprinte_11_y_b = (CCSprite*)getChildByTag(51);
     CCSprite *sprinte_12_y_b = (CCSprite*)getChildByTag(52);
     CCSprite *sprinte_13_y_b = (CCSprite*)getChildByTag(53);
     CCSprite *sprinte_14_y_b = (CCSprite*)getChildByTag(54);
+    CCSprite *sprinte_15_y_b = (CCSprite*)getChildByTag(55);
     
     for (int ii = 101; ii<=112; ii++)
     {
@@ -219,6 +215,7 @@ void game_bj::auto_pz(char id)
         bool ret_2 = false;
         bool ret_3 = false;
         bool ret_4 = false;
+        bool ret_5 = false;
         
         if(sprinte_11)
         {
@@ -240,44 +237,267 @@ void game_bj::auto_pz(char id)
             ret_4 = CCRect::CCRectIntersectsRect(sprinte_xxx->boundingBox(), sprinte_14->boundingBox());
         }
         
+        if(sprinte_15)
+        {
+            ret_5 = CCRect::CCRectIntersectsRect(sprinte_xxx->boundingBox(), sprinte_15->boundingBox());
+        }
+        
         if(ret_1)
         {
-            CCLOG("1");
-            this->removeChild(sprinte_11, true);
-            this->removeChild(sprinte_11_a, true);
-            this->removeChild(sprinte_11_b, true);
-            this->removeChild(sprinte_11_y_a, true);
-            this->removeChild(sprinte_11_y_b, true);
+            CCPoint point = sprinte_11->getPosition();
+//            CCLOG("1");
+//            this->removeChild(sprinte_11, true);
+//            this->removeChild(sprinte_11_a, true);
+//            this->removeChild(sprinte_11_b, true);
+//            this->removeChild(sprinte_11_y_a, true);
+//            this->removeChild(sprinte_11_y_b, true);
+            int new_value_11 = game_bj::e_11-10;
+            if(new_value_11 <= 0)
+            {
+                this->removeChild(sprinte_11, true);
+                this->removeChild(sprinte_11_a, true);
+                this->removeChild(sprinte_11_b, true);
+                this->removeChild(sprinte_11_y_a, true);
+                this->removeChild(sprinte_11_y_b, true);
+                CCProgressTimer *pt = (CCProgressTimer*)getChildByTag(71);
+                if(pt)
+                {
+                    this->removeChild(pt, true);
+                }
+                game_bj::e_11 = 100;
+                
+            }
+            CCProgressTimer *pt = (CCProgressTimer*)getChildByTag(71);
+            if(pt)
+            {
+                pt->setPercentage(game_bj::e_11);
+                pt->setPosition( ccp(point.x, point.y-20) );
+                pt->setType(kCCProgressTimerTypeBar);
+                CCFiniteTimeAction *action_1 = CCMoveTo::create((7*(point.y-1))/520,ccp(point.x,1));
+                pt->runAction(action_1);
+                
+                CCProgressTo *to = CCProgressTo::actionWithDuration(0.1, new_value_11);
+                pt->runAction(to);
+                game_bj::e_11 = game_bj::e_11-10;
+            }else
+            {
+                CCSprite *sprinte_11 = (CCSprite*)getChildByTag(11);
+                if(sprinte_11)
+                {
+                    CCProgressTimer *pt = CCProgressTimer::progressWithSprite(CCSprite::create("hatchling_exp_02.png"));
+                    pt->setPercentage(game_bj::e_11);
+                    pt->setPosition( ccp(point.x, point.y-20) );
+                    pt->setType(kCCProgressTimerTypeBar);
+                    pt->setScale(0.4);
+                    pt->setMidpoint(ccp(0,0));
+                    pt->setBarChangeRate(ccp(1,0));
+                    this->addChild(pt,0,71);
+                    CCFiniteTimeAction *action_1 = CCMoveTo::create((7*(point.y-1))/520,ccp(point.x,1));
+                    pt->runAction(action_1);
+                    
+                    CCProgressTo *to = CCProgressTo::actionWithDuration(0.1, new_value_11);
+                    pt->runAction(to);
+                    game_bj::e_11 = game_bj::e_11-10;
+                }
+                
+            }
+            
+            
+            
+            
+            
+            
+            CCSprite *item_gb = new CCSprite();
+            item_gb->initWithFile("item_coin.png");
+            item_gb->setPosition( ccp(point.x, point.y) );
+            item_gb->setScale(game_bj::scale);
+            this->addChild(item_gb, 0,61);
+            CCJumpTo* mJumpTo = CCJumpTo::actionWithDuration(2.0f, ccp(280, 1), 230.0f, 1);
+            CCActionInterval*  seq_aa = (CCActionInterval*)(CCSequence::actions(mJumpTo, NULL));
+            item_gb->runAction(seq_aa);
         }
         
         if(ret_2)
         {
+            CCPoint point = sprinte_12->getPosition();
             CCLOG("2");
             this->removeChild(sprinte_12, true);
             this->removeChild(sprinte_12_a, true);
             this->removeChild(sprinte_12_b, true);
             this->removeChild(sprinte_12_y_a, true);
             this->removeChild(sprinte_12_y_b, true);
+            CCSprite *item_gb = new CCSprite();
+            item_gb->initWithFile("item_coin.png");
+            item_gb->setPosition( ccp(point.x, point.y) );
+            item_gb->setScale(game_bj::scale);
+            this->addChild(item_gb, 0,62);
+            CCJumpTo* mJumpTo = CCJumpTo::actionWithDuration(2.0f, ccp(280, 1), 230.0f, 1);
+            CCActionInterval*  seq_aa = (CCActionInterval*)(CCSequence::actions(mJumpTo, NULL));
+            item_gb->runAction(seq_aa);
         }
         
         if(ret_3)
         {
-            CCLOG("3");
-            this->removeChild(sprinte_13, true);
-            this->removeChild(sprinte_13_a, true);
-            this->removeChild(sprinte_13_b, true);
-            this->removeChild(sprinte_13_y_a, true);
-            this->removeChild(sprinte_13_y_b, true);
+            CCPoint point = sprinte_13->getPosition();
+            
+            int new_value = game_bj::e_13-10;
+            CCLOG("%i",new_value);
+            if(new_value <= 0)
+            {
+                this->removeChild(sprinte_13, true);
+                this->removeChild(sprinte_13_a, true);
+                this->removeChild(sprinte_13_b, true);
+                this->removeChild(sprinte_13_y_a, true);
+                this->removeChild(sprinte_13_y_b, true);
+                CCProgressTimer *pt = (CCProgressTimer*)getChildByTag(73);
+                if(pt)
+                {
+                    this->removeChild(pt, true);
+                }
+                game_bj::e_13 = 100;
+
+            }
+            CCProgressTimer *pt = (CCProgressTimer*)getChildByTag(73);
+            if(pt)
+            {
+                pt->setPercentage(game_bj::e_13);
+                pt->setPosition( ccp(point.x, point.y-20) );
+                pt->setType(kCCProgressTimerTypeBar);
+                CCFiniteTimeAction *action_1 = CCMoveTo::create((7*(point.y-1))/520,ccp(point.x,1));
+                pt->runAction(action_1);
+                
+                CCProgressTo *to = CCProgressTo::actionWithDuration(0.1, new_value);
+                pt->runAction(to);
+                game_bj::e_13 = game_bj::e_13-10;
+            }else
+            {
+                CCSprite *sprinte_13 = (CCSprite*)getChildByTag(13);
+                if(sprinte_13)
+                {
+                    CCProgressTimer *pt = CCProgressTimer::progressWithSprite(CCSprite::create("hatchling_exp_02.png"));
+                    pt->setPercentage(game_bj::e_13);
+                    pt->setPosition( ccp(point.x, point.y-20) );
+                    pt->setType(kCCProgressTimerTypeBar);
+                    pt->setScale(0.4);
+                    pt->setMidpoint(ccp(0,0));
+                    pt->setBarChangeRate(ccp(1,0));
+                    this->addChild(pt,0,73);
+                    CCFiniteTimeAction *action_1 = CCMoveTo::create((7*(point.y-1))/520,ccp(point.x,1));
+                    pt->runAction(action_1);
+                    
+                    CCProgressTo *to = CCProgressTo::actionWithDuration(0.1, new_value);
+                    pt->runAction(to);
+                    game_bj::e_13 = game_bj::e_13-10;
+                }
+                
+            }
+            
+            
+            
+            
+            
+            
+            
+            CCSprite *item_gb = new CCSprite();
+            item_gb->initWithFile("item_coin.png");
+            item_gb->setPosition( ccp(point.x, point.y) );
+            item_gb->setScale(game_bj::scale);
+            this->addChild(item_gb, 0,63);
+            CCJumpTo* mJumpTo = CCJumpTo::actionWithDuration(2.0f, ccp(280, 1), 230.0f, 1);
+            CCActionInterval*  seq_aa = (CCActionInterval*)(CCSequence::actions(mJumpTo, NULL));
+            item_gb->runAction(seq_aa);
         }
         
         if(ret_4)
         {
-            CCLOG("4");
-            this->removeChild(sprinte_14, true);
-            this->removeChild(sprinte_14_a, true);
-            this->removeChild(sprinte_14_b, true);
-            this->removeChild(sprinte_14_y_a, true);
-            this->removeChild(sprinte_14_y_b, true);
+            CCPoint point = sprinte_14->getPosition();
+//            CCLOG("4");
+//            this->removeChild(sprinte_14, true);
+//            this->removeChild(sprinte_14_a, true);
+//            this->removeChild(sprinte_14_b, true);
+//            this->removeChild(sprinte_14_y_a, true);
+//            this->removeChild(sprinte_14_y_b, true);
+            
+            int new_value_14 = game_bj::e_14-10;
+            if(new_value_14 <= 0)
+            {
+                this->removeChild(sprinte_14, true);
+                this->removeChild(sprinte_14_a, true);
+                this->removeChild(sprinte_14_b, true);
+                this->removeChild(sprinte_14_y_a, true);
+                this->removeChild(sprinte_14_y_b, true);
+                CCProgressTimer *pt = (CCProgressTimer*)getChildByTag(74);
+                if(pt)
+                {
+                    this->removeChild(pt, true);
+                }
+                game_bj::e_14 = 100;
+                
+            }
+            CCProgressTimer *pt = (CCProgressTimer*)getChildByTag(74);
+            if(pt)
+            {
+                pt->setPercentage(game_bj::e_14);
+                pt->setPosition( ccp(point.x, point.y-20) );
+                pt->setType(kCCProgressTimerTypeBar);
+                CCFiniteTimeAction *action_1 = CCMoveTo::create((7*(point.y-1))/520,ccp(point.x,1));
+                pt->runAction(action_1);
+                
+                CCProgressTo *to = CCProgressTo::actionWithDuration(0.1, new_value_14);
+                pt->runAction(to);
+                game_bj::e_14 = game_bj::e_14-10;
+            }else
+            {
+                CCSprite *sprinte_14 = (CCSprite*)getChildByTag(14);
+                if(sprinte_14)
+                {
+                    CCProgressTimer *pt = CCProgressTimer::progressWithSprite(CCSprite::create("hatchling_exp_02.png"));
+                    pt->setPercentage(game_bj::e_14);
+                    pt->setPosition( ccp(point.x, point.y-20) );
+                    pt->setType(kCCProgressTimerTypeBar);
+                    pt->setScale(0.4);
+                    pt->setMidpoint(ccp(0,0));
+                    pt->setBarChangeRate(ccp(1,0));
+                    this->addChild(pt,0,74);
+                    CCFiniteTimeAction *action_1 = CCMoveTo::create((7*(point.y-1))/520,ccp(point.x,1));
+                    pt->runAction(action_1);
+                    
+                    CCProgressTo *to = CCProgressTo::actionWithDuration(0.1, new_value_14);
+                    pt->runAction(to);
+                    game_bj::e_14 = game_bj::e_14-10;
+                }
+                
+            }
+            
+            
+            
+            CCSprite *item_gb = new CCSprite();
+            item_gb->initWithFile("item_coin.png");
+            item_gb->setPosition( ccp(point.x, point.y) );
+            item_gb->setScale(game_bj::scale);
+            this->addChild(item_gb, 0,64);
+            CCJumpTo* mJumpTo = CCJumpTo::actionWithDuration(2.0f, ccp(280, 1), 230.0f, 1);
+            CCActionInterval*  seq_aa = (CCActionInterval*)(CCSequence::actions(mJumpTo, NULL));
+            item_gb->runAction(seq_aa);
+        }
+        
+        if(ret_5)
+        {
+            CCPoint point = sprinte_15->getPosition();
+            CCLOG("5");
+            this->removeChild(sprinte_15, true);
+            this->removeChild(sprinte_15_a, true);
+            this->removeChild(sprinte_15_b, true);
+            this->removeChild(sprinte_15_y_a, true);
+            this->removeChild(sprinte_15_y_b, true);
+            CCSprite *item_gb = new CCSprite();
+            item_gb->initWithFile("item_coin.png");
+            item_gb->setPosition( ccp(130, 340) );
+            item_gb->setScale(game_bj::scale);
+            this->addChild(item_gb, 0,64);
+            CCJumpTo* mJumpTo = CCJumpTo::actionWithDuration(2.0f, ccp(280, 1), 230.0f, 1);
+            CCActionInterval*  seq_aa = (CCActionInterval*)(CCSequence::actions(mJumpTo, NULL));
+            item_gb->runAction(seq_aa);
         }
 
         
@@ -351,17 +571,19 @@ void game_bj::auto_pz(char id)
     }
     
     
-    for (int i=11; i<=14; i++)
+    for (int i=11; i<=15; i++)
     {
         CCSprite *sprinte_yyy = (CCSprite*)getChildByTag(i);
         CCSprite *sprinte_yyy_a = (CCSprite*)getChildByTag(i+10);
         CCSprite *sprinte_yyy_b = (CCSprite*)getChildByTag(i+20);
         CCSprite *sprinte_yyy_y_a = (CCSprite*)getChildByTag(i+30);
         CCSprite *sprinte_yyy_y_b = (CCSprite*)getChildByTag(i+40);
+        CCSprite *sprinte_item_gb = (CCSprite*)getChildByTag(i+50);
+        CCSprite *sprinte_pt = (CCSprite*)getChildByTag(i+60);
         if(sprinte_yyy)
         {
             CCPoint a = sprinte_yyy->getPosition();
-            if( a.y <= 4)
+            if( a.y <= 10)
             {
                 this->removeChild(sprinte_yyy, true);
             }
@@ -369,7 +591,7 @@ void game_bj::auto_pz(char id)
         if(sprinte_yyy_a)
         {
             CCPoint a = sprinte_yyy_a->getPosition();
-            if( a.y <= 4)
+            if( a.y <= 10)
             {
                 this->removeChild(sprinte_yyy_a, true);
             }
@@ -377,7 +599,7 @@ void game_bj::auto_pz(char id)
         if(sprinte_yyy_b)
         {
             CCPoint a = sprinte_yyy_b->getPosition();
-            if( a.y <= 4)
+            if( a.y <= 10)
             {
                 this->removeChild(sprinte_yyy_b, true);
             }
@@ -385,7 +607,7 @@ void game_bj::auto_pz(char id)
         if(sprinte_yyy_y_a)
         {
             CCPoint a = sprinte_yyy_y_a->getPosition();
-            if( a.y <= 4)
+            if( a.y <= 10)
             {
                 this->removeChild(sprinte_yyy_y_a, true);
             }
@@ -393,9 +615,30 @@ void game_bj::auto_pz(char id)
         if(sprinte_yyy_y_b)
         {
             CCPoint a = sprinte_yyy_y_b->getPosition();
-            if( a.y <= 4)
+            if( a.y <= 10)
             {
                 this->removeChild(sprinte_yyy_y_b, true);
+            }
+        }
+        if(sprinte_item_gb)
+        {
+            CCPoint a = sprinte_item_gb->getPosition();
+            if( a.y <= 10)
+            {
+                this->removeChild(sprinte_item_gb, true);
+            }
+        }
+        if(sprinte_pt)
+        {
+            CCPoint a = sprinte_pt->getPosition();
+            if( a.y <= 10)
+            {
+                this->removeChild(sprinte_pt, true);
+                game_bj::e_11 = 100;
+                game_bj::e_12 = 100;
+                game_bj::e_13 = 100;
+                game_bj::e_14 = 100;
+                game_bj::e_15 = 100;
             }
         }
     }
@@ -406,12 +649,19 @@ void game_bj::auto_pz(char id)
 //自动生成敌人
 void game_bj::auto_enemy(char id)
 {
-    for (int i=11; i<=14; i++)
+    for (int i=11; i<=15; i++)
     {
         CCSprite *auto_bullet_1 = new CCSprite();
-        auto_bullet_1->initWithFile("dragon_01.png");
+        if(i==13 || i==14 || i==11)
+        {
+            auto_bullet_1->initWithFile("dragon_02.png");
+        }else
+        {
+            auto_bullet_1->initWithFile("dragon_01.png");
+        }
         auto_bullet_1->setTextureRect(CCRectMake(0, 0, 85, 190));
-        auto_bullet_1->setPosition( ccp((i-11)*100+10, 480) );
+        auto_bullet_1->setPosition( ccp((i-11)*70+20, 480) );
+        auto_bullet_1->setScale(game_bj::scale);
         this->addChild(auto_bullet_1, 0, i);
         
         
@@ -420,7 +670,8 @@ void game_bj::auto_enemy(char id)
         CCSprite *pMyself_wind_a = new CCSprite();
         pMyself_wind_a->initWithFile("dragon_01.png");
         pMyself_wind_a->setTextureRect(CCRectMake(85, 50, 60, 70));
-        pMyself_wind_a->setPosition( ccp((i-11)*100-30, 520) );
+        pMyself_wind_a->setPosition( ccp((i-11)*70+5, 480) );
+        pMyself_wind_a->setScale(game_bj::scale);
         this->addChild(pMyself_wind_a, 0, i+10);
         
         
@@ -428,7 +679,8 @@ void game_bj::auto_enemy(char id)
         pMyself_wind_b->initWithFile("dragon_01.png");
         pMyself_wind_b->setTextureRect(CCRectMake(85, 50, 60, 70));
         pMyself_wind_b->setFlipX(true);
-        pMyself_wind_b->setPosition( ccp((i-11)*100+50, 520) );
+        pMyself_wind_b->setPosition( ccp((i-11)*70+35, 480) );
+        pMyself_wind_b->setScale(game_bj::scale);
         this->addChild(pMyself_wind_b, 0, i+20);
         
         
@@ -437,7 +689,8 @@ void game_bj::auto_enemy(char id)
         CCSprite *pMyself_wind_y_a = new CCSprite();
         pMyself_wind_y_a->initWithFile("dragon_01.png");
         pMyself_wind_y_a->setTextureRect(CCRectMake(110, 10, 10, 20));
-        pMyself_wind_y_a->setPosition( ccp((i-11)*100-1, 487) );
+        pMyself_wind_y_a->setPosition( ccp((i-11)*70+14, 486) );
+        pMyself_wind_y_a->setScale(game_bj::scale);
         this->addChild(pMyself_wind_y_a, 0, i+30);
         
         
@@ -445,25 +698,26 @@ void game_bj::auto_enemy(char id)
         pMyself_wind_y_b->initWithFile("dragon_01.png");
         pMyself_wind_y_b->setTextureRect(CCRectMake(110, 10, 10, 20));
         pMyself_wind_y_b->setFlipX(true);
-        pMyself_wind_y_b->setPosition( ccp((i-11)*100+20, 487) );
+        pMyself_wind_y_b->setPosition( ccp((i-11)*70+26, 486) );
+        pMyself_wind_y_b->setScale(game_bj::scale);
         this->addChild(pMyself_wind_y_b, 0, i+40);
         
         
         
         
-        CCFiniteTimeAction *action_1 = CCMoveTo::create(7,ccp((i-11)*100+10,1));
+        CCFiniteTimeAction *action_1 = CCMoveTo::create(7,ccp((i-11)*70+20,1));
         auto_bullet_1->runAction(action_1);
         
-        CCFiniteTimeAction *action_a = CCMoveTo::create(7,ccp((i-11)*100-10,1));
+        CCFiniteTimeAction *action_a = CCMoveTo::create(7,ccp((i-11)*70+5,1));
         pMyself_wind_a->runAction(action_a);
         
-        CCFiniteTimeAction *action_b = CCMoveTo::create(7,ccp((i-11)*100+30,1));
+        CCFiniteTimeAction *action_b = CCMoveTo::create(7,ccp((i-11)*70+35,1));
         pMyself_wind_b->runAction(action_b);
         
-        CCFiniteTimeAction *action_y_a = CCMoveTo::create(7,ccp((i-11)*100-1,1));
+        CCFiniteTimeAction *action_y_a = CCMoveTo::create(7,ccp((i-11)*70+14,7));
         pMyself_wind_y_a->runAction(action_y_a);
         
-        CCFiniteTimeAction *action_y_b = CCMoveTo::create(7,ccp((i-11)*100+20,1));
+        CCFiniteTimeAction *action_y_b = CCMoveTo::create(7,ccp((i-11)*70+26,7));
         pMyself_wind_y_b->runAction(action_y_b);
 
         
@@ -720,35 +974,36 @@ bool game_bj::ccTouchBegan(CCTouch *pTouches, CCEvent *pEvent)
     CCSprite *sprinte_5 = (CCSprite*)getChildByTag(5);
     CCSprite *sprinte_6 = (CCSprite*)getChildByTag(6);
     CCSprite *sprinte_7 = (CCSprite*)getChildByTag(7);
-    float endx = location.x;
-    sprinte_5->setPosition(ccp(endx,50));
-    sprinte_6->setPosition(ccp(endx-35,40));
-    sprinte_7->setPosition(ccp(endx+30,40));
+    bool ret_5 = CCRect::CCRectContainsPoint(sprinte_5->boundingBox(), location);
+    bool ret_6 = CCRect::CCRectContainsPoint(sprinte_6->boundingBox(), location);
+    bool ret_7 = CCRect::CCRectContainsPoint(sprinte_7->boundingBox(), location);
+    if(ret_5 || ret_6 || ret_7)
+    {
+        game_bj::touch = true;
+    }
     return true;
 }
 
 void game_bj::ccTouchEnded(CCTouch *pTouches, CCEvent *pEvent)
 {
-    
-    
+    game_bj::touch = false;
 }
 
 void game_bj::ccTouchMoved(CCTouch *pTouches, CCEvent *pEvent)
 {
     CCPoint location = pTouches->getLocationInView();
     location = CCDirector::sharedDirector()->convertToGL(location);
+    
     CCSprite *sprinte_5 = (CCSprite*)getChildByTag(5);
     CCSprite *sprinte_6 = (CCSprite*)getChildByTag(6);
     CCSprite *sprinte_7 = (CCSprite*)getChildByTag(7);
-    bool ret_5 = CCRect::CCRectContainsPoint(sprinte_5->boundingBox(), location);
-    bool ret_6 = CCRect::CCRectContainsPoint(sprinte_6->boundingBox(), location);
-    bool ret_7 = CCRect::CCRectContainsPoint(sprinte_7->boundingBox(), location);
-    if(ret_5 || ret_6 || ret_7)
+
+    if(game_bj::touch == true)
     {
         float endx = location.x;
         sprinte_5->setPosition(ccp(endx,50));
-        sprinte_6->setPosition(ccp(endx-35,40));
-        sprinte_7->setPosition(ccp(endx+30,40));
+        sprinte_6->setPosition(ccp(endx-15,40));
+        sprinte_7->setPosition(ccp(endx+12,40));
     }
 }
 

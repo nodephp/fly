@@ -226,6 +226,8 @@
 		CB8D194416A559B3006F5CAC /* sunny_01.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8D194316A559B3006F5CAC /* sunny_01.png */; };
 		CB8D194716A55AA2006F5CAC /* Space1.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8D194616A55AA2006F5CAC /* Space1.png */; };
 		CB8D194916A55C23006F5CAC /* sunny_01.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB8D194816A55C23006F5CAC /* sunny_01.plist */; };
+		CBA21F5F16A644FB0092AFB9 /* item_coin.png in Resources */ = {isa = PBXBuildFile; fileRef = CBA21F5E16A644FB0092AFB9 /* item_coin.png */; };
+		CBA21F6516A670450092AFB9 /* hatchling_exp_02.png in Resources */ = {isa = PBXBuildFile; fileRef = CBA21F6416A670450092AFB9 /* hatchling_exp_02.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -690,6 +692,9 @@
 		CB8D194316A559B3006F5CAC /* sunny_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunny_01.png; sourceTree = "<group>"; };
 		CB8D194616A55AA2006F5CAC /* Space1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Space1.png; path = "../../../../../Downloads/Dragon FlightDragonFlight.app/background/Space1.png"; sourceTree = "<group>"; };
 		CB8D194816A55C23006F5CAC /* sunny_01.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sunny_01.plist; sourceTree = "<group>"; };
+		CBA21F5E16A644FB0092AFB9 /* item_coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = item_coin.png; path = ../../../../../Desktop/item_coin.png; sourceTree = "<group>"; };
+		CBA21F6216A659CF0092AFB9 /* dragon_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragon_02.png; sourceTree = "<group>"; };
+		CBA21F6416A670450092AFB9 /* hatchling_exp_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hatchling_exp_02.png; path = ../../../../../Desktop/hatchling_exp_02.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -759,6 +764,9 @@
 		CB684BE016A3D3010007B9AA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CBA21F6416A670450092AFB9 /* hatchling_exp_02.png */,
+				CBA21F6216A659CF0092AFB9 /* dragon_02.png */,
+				CBA21F5E16A644FB0092AFB9 /* item_coin.png */,
 				CB57337F16A5F31200EF29A7 /* dragon_01.png */,
 				CB8D194616A55AA2006F5CAC /* Space1.png */,
 				CB8D194316A559B3006F5CAC /* sunny_01.png */,
@@ -1700,6 +1708,8 @@
 				CB8D194716A55AA2006F5CAC /* Space1.png in Resources */,
 				CB8D194916A55C23006F5CAC /* sunny_01.plist in Resources */,
 				CB57338016A5F31200EF29A7 /* dragon_01.png in Resources */,
+				CBA21F5F16A644FB0092AFB9 /* item_coin.png in Resources */,
+				CBA21F6516A670450092AFB9 /* hatchling_exp_02.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

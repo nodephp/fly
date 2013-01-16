@@ -23,6 +23,15 @@ public:
     int k=1;
     int l=1;
     
+    float scale = 0.45;
+    bool touch = false;
+    
+    int e_11 = 100;
+    int e_12 = 100;
+    int e_13 = 100;
+    int e_14 = 100;
+    int e_15 = 100;
+    
 
     static cocos2d::CCScene* scene();
     void update(float dt);
