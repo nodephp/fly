@@ -10,6 +10,7 @@
 
 #include "cocos2d.h"
 #include "game_bj.h"
+#include "layer_main.h"
 
 USING_NS_CC;
 
@@ -37,10 +38,16 @@ bool AppDelegate::applicationDidFinishLaunching()
     // set FPS. the default value is 1.0/60 if you don't call this
     pDirector->setAnimationInterval(1.0 / 60);
 
-    // create a scene. it's an autorelease object
-    CCScene *pScene = game_bj::scene();
-
-    // run
+//    test_1
+//    CCScene *pScene = game_bj::scene();
+//    pDirector->runWithScene(pScene);
+    
+//    test_2
+//    layer_main *layer_main = new layer_main();
+//    CCScene *pScene = layer_main->scene();
+//    pDirector->replaceScene(pScene);
+    
+    CCScene *pScene = layer_main::scene();
     pDirector->runWithScene(pScene);
 
     return true;

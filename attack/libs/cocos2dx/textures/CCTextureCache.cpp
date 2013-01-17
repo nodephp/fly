@@ -389,7 +389,7 @@ void CCTextureCache::addImageAsyncCallBack(float dt)
 CCTexture2D * CCTextureCache::addImage(const char * path)
 {
     CCAssert(path != NULL, "TextureCache: fileimage MUST not be NULL");
-
+    
     CCTexture2D * texture = NULL;
     // Split up directory and filename
     // MUTEX:
@@ -404,6 +404,7 @@ CCTexture2D * CCTextureCache::addImage(const char * path)
     texture = (CCTexture2D*)m_pTextures->objectForKey(pathKey.c_str());
 
     std::string fullpath = pathKey; // (CCFileUtils::sharedFileUtils()->fullPathFromRelativePath(path));
+
     if( ! texture ) 
     {
         std::string lowerCase(path);

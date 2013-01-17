@@ -118,7 +118,19 @@ bool game_bj::init()
     
     
 
-    
+
+//    CCParticleSystem *m_emitter;
+//    m_emitter = CCParticleFireworks::node();
+//    m_emitter->retain();
+//    m_emitter->setAngle(10);
+//    m_emitter->setAngleVar(100);
+//    m_emitter->setLife(4);
+//    m_emitter->setLifeVar(1);
+//    
+//    this->addChild(m_emitter, 10);
+//    m_emitter->setTexture( CCTextureCache::sharedTextureCache()->addImage("enemy.png"));
+//    m_emitter->setPosition(ccp(150,320));
+////    this->removeChild(m_emitter, true);
     
     
     auto_enemy('yyy');
@@ -164,7 +176,7 @@ void game_bj::update(float dt)
 void game_bj::auto_bullet(int x, int y, char id)
 {
     CCSprite *auto_bullet = new CCSprite();
-    auto_bullet->initWithFile("butlet.png");
+    auto_bullet->initWithFile("bullet_01_02.png");
     auto_bullet->setPosition( ccp(x, y) );
     this->addChild(auto_bullet, 0, id);
     CCFiniteTimeAction *action = CCMoveTo::create(1,ccp(x,490));
