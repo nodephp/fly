@@ -15,23 +15,32 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "obj_myself.h"
+//#include "obj_myself.h"
+
+
+extern int g_nNum;
+extern cocos2d::CCLayer *layer_m;
+
+
 
 class layer_background;
-class obj_myself;
+//class obj_myself;
+
 
 class layer_main : public cocos2d::CCLayer
 {
 public:
     static cocos2d::CCScene* scene();
     virtual bool init();
+    virtual bool game_start();
     bool touch = false;
-    float scale = 0.45;
-    
-    obj_myself *obj_myself;
-    
+    static float scale;
+    bool addChild_a(cocos2d::CCSprite *pSprite, int idd);
     
     
+
+//    obj_myself *objmyself;
+        
     
     void registerWithTouchDispatcher();
     
@@ -42,7 +51,6 @@ public:
     
     
     void menuCloseCallback(CCObject* pSender);
-    
     CREATE_FUNC(layer_main);
 };
 

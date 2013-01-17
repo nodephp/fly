@@ -22,7 +22,7 @@ public:
     static cocos2d::CCScene* scene();
     virtual bool init();
     void update(float dt);
-    
+   
     
     void menuCloseCallback(CCObject* pSender);
     
