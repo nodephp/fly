@@ -9,6 +9,7 @@
 #include "obj_myself.h"
 #include "SimpleAudioEngine.h"
 #include "layer_main.h"
+#include "config.h"
 
 using namespace cocos2d;
 using namespace CocosDenshion;
@@ -33,34 +34,34 @@ bool obj_myself::init()
     {
         return false;
     }
-    CCLOG("%i",g_nNum);
-    CCLOG("%p",layer_m);
     if(!layer_m)
     {
         return false;
     }
     
+//    CCLOG("%c",SPRITE_MYSELF_BODY_RESOURCE);
+
     CCSprite *pMyself = new CCSprite();
-    pMyself->initWithFile("sunny_01.png");
-    pMyself->setTextureRect(CCRectMake(0, 0, 45, 110));
-    pMyself->setPosition( ccp(100, 50) );
-    pMyself->setScale(obj_myself::scale);
-    layer_m->addChild(pMyself,0,1);
+    pMyself->initWithFile(SPRITE_MYSELF_BODY_RESOURCE);
+    pMyself->setTextureRect(CCRectMake(SPRITE_MYSELF_BODY_RET[0], SPRITE_MYSELF_BODY_RET[1], SPRITE_MYSELF_BODY_RET[2], SPRITE_MYSELF_BODY_RET[3]));
+    pMyself->setPosition( ccp(SPRITE_MYSELF_BODY_POSITION[0], SPRITE_MYSELF_BODY_POSITION[1]) );
+    pMyself->setScale(global_scale);
+    layer_m->addChild(pMyself,0,SPRITE_MYSELF_BODY);
     
     CCSprite *pMyself_wind_a = new CCSprite();
-    pMyself_wind_a->initWithFile("sunny_01.png");
-    pMyself_wind_a->setTextureRect(CCRectMake(45, 0, 100, 60));
-    pMyself_wind_a->setPosition( ccp(85, 40) );
-    pMyself_wind_a->setScale(obj_myself::scale);
-    layer_m->addChild(pMyself_wind_a, 0,2);
+    pMyself_wind_a->initWithFile(SPRITE_MYSELF_BODY_RESOURCE);
+    pMyself_wind_a->setTextureRect(CCRectMake(SPRITE_MYSELF_WIND_A_RET[0], SPRITE_MYSELF_WIND_A_RET[1], SPRITE_MYSELF_WIND_A_RET[2], SPRITE_MYSELF_WIND_A_RET[3]));
+    pMyself_wind_a->setPosition( ccp(SPRITE_MYSELF_WIND_A_POSITION[0], SPRITE_MYSELF_WIND_A_POSITION[1]) );
+    pMyself_wind_a->setScale(global_scale);
+    layer_m->addChild(pMyself_wind_a, 0,SPRITE_MYSELF_WIND_A);
     
     CCSprite *pMyself_wind_b = new CCSprite();
-    pMyself_wind_b->initWithFile("sunny_01.png");
-    pMyself_wind_b->setTextureRect(CCRectMake(45, 0, 100, 60));
+    pMyself_wind_b->initWithFile(SPRITE_MYSELF_BODY_RESOURCE);
+    pMyself_wind_b->setTextureRect(CCRectMake(SPRITE_MYSELF_WIND_B_RET[0], SPRITE_MYSELF_WIND_B_RET[1], SPRITE_MYSELF_WIND_B_RET[2], SPRITE_MYSELF_WIND_B_RET[3]));
     pMyself_wind_b->setFlipX(true);
-    pMyself_wind_b->setPosition( ccp(112, 40) );
-    pMyself_wind_b->setScale(obj_myself::scale);
-    layer_m->addChild(pMyself_wind_b, 0,3);
+    pMyself_wind_b->setPosition( ccp(SPRITE_MYSELF_WIND_B_POSITION[0], SPRITE_MYSELF_WIND_B_POSITION[1]) );
+    pMyself_wind_b->setScale(global_scale);
+    layer_m->addChild(pMyself_wind_b, 0,SPRITE_MYSELF_WIND_B);
 
     CCActionInterval*  act1_a = CCSkewTo::actionWithDuration(0.3, 22,0);
     CCActionInterval*  act2_a = CCSkewTo::actionWithDuration(0.3, -22,0);
@@ -77,7 +78,6 @@ bool obj_myself::init()
     
     
     
-//    getChildByTag_a(1);
     
     return true;
 }
@@ -85,12 +85,7 @@ bool obj_myself::init()
 
 
 
-CCSprite* obj_myself::getChildByTag_a(int idd)
-{
-    CCSprite *getChildByTag_a = (CCSprite*)getChildByTag(idd);
-    CCLOG("%p",getChildByTag_a);
-    return getChildByTag_a;
-}
+
 
 
 

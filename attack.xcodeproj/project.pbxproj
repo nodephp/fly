@@ -208,6 +208,7 @@
 		CB684E7F16A3D3040007B9AA /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB684E7E16A3D3040007B9AA /* AppDelegate.cpp */; };
 		CB684E8216A3D3040007B9AA /* game_bj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB684E8116A3D3040007B9AA /* game_bj.cpp */; };
 		CB8D194916A55C23006F5CAC /* sunny_01.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB8D194816A55C23006F5CAC /* sunny_01.plist */; };
+		CB9FBFCC16A8DC9F00ADAF04 /* config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB9FBFCA16A8DC9F00ADAF04 /* config.cpp */; };
 		CBA21F9516A75AA90092AFB9 /* bullet_01_02.png in Resources */ = {isa = PBXBuildFile; fileRef = CBA21F8E16A75AA90092AFB9 /* bullet_01_02.png */; };
 		CBA21F9616A75AA90092AFB9 /* dragon_01.png in Resources */ = {isa = PBXBuildFile; fileRef = CBA21F8F16A75AA90092AFB9 /* dragon_01.png */; };
 		CBA21F9716A75AA90092AFB9 /* dragon_02.png in Resources */ = {isa = PBXBuildFile; fileRef = CBA21F9016A75AA90092AFB9 /* dragon_02.png */; };
@@ -665,6 +666,8 @@
 		CB684E8016A3D3040007B9AA /* game_bj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = game_bj.h; path = Classes/game_bj.h; sourceTree = "<group>"; };
 		CB684E8116A3D3040007B9AA /* game_bj.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = game_bj.cpp; path = Classes/game_bj.cpp; sourceTree = "<group>"; };
 		CB8D194816A55C23006F5CAC /* sunny_01.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sunny_01.plist; sourceTree = "<group>"; };
+		CB9FBFCA16A8DC9F00ADAF04 /* config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = config.cpp; path = Classes/config.cpp; sourceTree = "<group>"; };
+		CB9FBFCB16A8DC9F00ADAF04 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = Classes/config.h; sourceTree = "<group>"; };
 		CBA21F8E16A75AA90092AFB9 /* bullet_01_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullet_01_02.png; path = Resources/test/bullet_01_02.png; sourceTree = "<group>"; };
 		CBA21F8F16A75AA90092AFB9 /* dragon_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dragon_01.png; path = Resources/test/dragon_01.png; sourceTree = "<group>"; };
 		CBA21F9016A75AA90092AFB9 /* dragon_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dragon_02.png; path = Resources/test/dragon_02.png; sourceTree = "<group>"; };
@@ -1608,6 +1611,8 @@
 				CBA21FDD16A761270092AFB9 /* obj_myself.h */,
 				CBA21FDF16A761370092AFB9 /* server_http.cpp */,
 				CBA21FE016A761370092AFB9 /* server_http.h */,
+				CB9FBFCA16A8DC9F00ADAF04 /* config.cpp */,
+				CB9FBFCB16A8DC9F00ADAF04 /* config.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1877,6 +1882,7 @@
 				CBA21FDB16A761050092AFB9 /* obj_enemy.cpp in Sources */,
 				CBA21FDE16A761270092AFB9 /* obj_myself.cpp in Sources */,
 				CBA21FE116A761370092AFB9 /* server_http.cpp in Sources */,
+				CB9FBFCC16A8DC9F00ADAF04 /* config.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,10 +9,10 @@
 #include "layer_main.h"
 #include "SimpleAudioEngine.h"
 #include "obj_myself.h"
+#include "config.h"
 
 
-int g_nNum=11;
-cocos2d::CCLayer *layer_m=NULL;
+cocos2d::CCLayer *layer_m = NULL;
 
 using namespace cocos2d;
 using namespace CocosDenshion;
@@ -52,22 +52,26 @@ bool layer_main::init()
     
     
     //初始化自己
-    this->schedule(schedule_selector(layer_main::game_start),1);
+    this->schedule(schedule_selector(layer_main::game_start),0.5);
+    
+    
+    
+    
+    
+    
+    
+    
     return true;
 }
 
 
-bool layer_main::addChild_a(CCSprite *pSprite, int idd)
-{
-    this->addChild(pSprite, 0,idd);
-    return true;
-}
+
+
 
 bool layer_main::game_start()
 {
-    CCLOG("111");
-    CCSprite *sprinte_1 = (CCSprite*)getChildByTag(1);
-    if(!sprinte_1)
+    CCSprite *sprite_myself_body = (CCSprite*)getChildByTag(SPRITE_MYSELF_BODY);
+    if(!sprite_myself_body)
     {
         obj_myself::obj_myself();
         this->unschedule(schedule_selector( layer_main::game_start ));
@@ -90,21 +94,14 @@ bool layer_main::ccTouchBegan(CCTouch *pTouches, CCEvent *pEvent)
     CCPoint location = pTouches->getLocationInView();
     location = CCDirector::sharedDirector()->convertToGL(location);
     
+    CCSprite *sprite_myself_body   = (CCSprite*)getChildByTag(SPRITE_MYSELF_BODY);
+    CCSprite *sprite_myself_wind_a = (CCSprite*)getChildByTag(SPRITE_MYSELF_WIND_A);
+    CCSprite *sprite_myself_wind_b = (CCSprite*)getChildByTag(SPRITE_MYSELF_WIND_B);
     
-    
-    
-    CCSprite *sprinte_5 = (CCSprite*)getChildByTag(1);
-    CCSprite *sprinte_6 = (CCSprite*)getChildByTag(2);
-    CCSprite *sprinte_7 = (CCSprite*)getChildByTag(3);
-    
-//    CCLOG("%p",sprinte_5);
-//    CCLOG("%p",sprinte_6);
-//    CCLOG("%p",sprinte_7);
-    
-    bool ret_5 = CCRect::CCRectContainsPoint(sprinte_5->boundingBox(), location);
-    bool ret_6 = CCRect::CCRectContainsPoint(sprinte_6->boundingBox(), location);
-    bool ret_7 = CCRect::CCRectContainsPoint(sprinte_7->boundingBox(), location);
-    if(ret_5 || ret_6 || ret_7)
+    bool ret_sprite_myself_body    = CCRect::CCRectContainsPoint(sprite_myself_body->boundingBox(), location);
+    bool ret_sprite_myself_wind_a  = CCRect::CCRectContainsPoint(sprite_myself_wind_a->boundingBox(), location);
+    bool ret_sprite_myself_wind_b  = CCRect::CCRectContainsPoint(sprite_myself_wind_b->boundingBox(), location);
+    if(ret_sprite_myself_body || ret_sprite_myself_wind_a || ret_sprite_myself_wind_b)
     {
         layer_main::touch = true;
     }
@@ -121,16 +118,16 @@ void layer_main::ccTouchMoved(CCTouch *pTouches, CCEvent *pEvent)
     CCPoint location = pTouches->getLocationInView();
     location = CCDirector::sharedDirector()->convertToGL(location);
     
-    CCSprite *sprinte_5 = (CCSprite*)getChildByTag(1);
-    CCSprite *sprinte_6 = (CCSprite*)getChildByTag(2);
-    CCSprite *sprinte_7 = (CCSprite*)getChildByTag(3);
+    CCSprite *sprite_myself_body   = (CCSprite*)getChildByTag(SPRITE_MYSELF_BODY);
+    CCSprite *sprite_myself_wind_a = (CCSprite*)getChildByTag(SPRITE_MYSELF_WIND_A);
+    CCSprite *sprite_myself_wind_b = (CCSprite*)getChildByTag(SPRITE_MYSELF_WIND_B);
     
     if(layer_main::touch == true)
     {
         float endx = location.x;
-        sprinte_5->setPosition(ccp(endx,50));
-        sprinte_6->setPosition(ccp(endx-15,40));
-        sprinte_7->setPosition(ccp(endx+12,40));
+        sprite_myself_body->setPosition(ccp(endx,SPRITE_MYSELF_BODY_POSITION[1]));
+        sprite_myself_wind_a->setPosition(ccp(endx-15,SPRITE_MYSELF_WIND_A_POSITION[1]));
+        sprite_myself_wind_b->setPosition(ccp(endx+12,SPRITE_MYSELF_WIND_A_POSITION[1]));
     }
 }
 

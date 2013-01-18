@@ -18,9 +18,7 @@
 //#include "obj_myself.h"
 
 
-extern int g_nNum;
 extern cocos2d::CCLayer *layer_m;
-
 
 
 class layer_background;
@@ -35,12 +33,7 @@ public:
     virtual bool game_start();
     bool touch = false;
     static float scale;
-    bool addChild_a(cocos2d::CCSprite *pSprite, int idd);
     
-    
-
-//    obj_myself *objmyself;
-        
     
     void registerWithTouchDispatcher();
     

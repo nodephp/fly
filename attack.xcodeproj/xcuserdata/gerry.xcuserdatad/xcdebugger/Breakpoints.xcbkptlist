@@ -71,30 +71,5 @@
          startingLineNumber = "13"
          endingLineNumber = "13">
       </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         condition = "ss"
-         continueAfterRunningActions = "No"
-         filePath = "attack/Classes/obj_myself.cpp"
-         timestampString = "380108690.374286"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "92"
-         endingLineNumber = "92"
-         landmarkName = "obj_myself::getChildByTag_a(int idd)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "attack/Classes/layer_main.h"
-         timestampString = "380108560.633808"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "40"
-         endingLineNumber = "40">
-      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
