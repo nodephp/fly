@@ -30,7 +30,10 @@ class layer_main : public cocos2d::CCLayer
 public:
     static cocos2d::CCScene* scene();
     virtual bool init();
+    virtual bool init_myself();
     virtual bool game_start();
+    virtual void shoot();
+    virtual bool auto_collide();
     bool touch = false;
     static float scale;
     

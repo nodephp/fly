@@ -10,5 +10,21 @@
 #define __attack__obj_bullet__
 
 #include <iostream>
+#include "cocos2d.h"
+
+
+
+
+class obj_bullet : public cocos2d::CCLayer
+{
+public:
+    obj_bullet();
+    virtual ~obj_bullet();
+    virtual bool init(cocos2d::CCSprite *sprite_myself_body);
+    virtual bool auto_bullet(int x, int y, int id);
+    
+    
+//    CREATE_FUNC(obj_bullet);
+};
 
 #endif /* defined(__attack__obj_bullet__) */

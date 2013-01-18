@@ -9,6 +9,7 @@
 #include "layer_main.h"
 #include "SimpleAudioEngine.h"
 #include "obj_myself.h"
+#include "obj_bullet.h"
 #include "config.h"
 
 
@@ -52,12 +53,16 @@ bool layer_main::init()
     
     
     //初始化自己
-    this->schedule(schedule_selector(layer_main::game_start),0.5);
+    this->schedule(schedule_selector(layer_main::init_myself),0.5);
     
     
     
+    //碰撞控制
+    this->schedule(schedule_selector(layer_main::auto_collide),0.1);
     
     
+    //出怪
+    this->schedule(schedule_selector(layer_main::game_start),5);
     
     
     
@@ -68,16 +73,104 @@ bool layer_main::init()
 
 
 
-bool layer_main::game_start()
+
+
+
+
+bool layer_main::init_myself()
 {
     CCSprite *sprite_myself_body = (CCSprite*)getChildByTag(SPRITE_MYSELF_BODY);
     if(!sprite_myself_body)
     {
         obj_myself::obj_myself();
         this->unschedule(schedule_selector( layer_main::game_start ));
+        
+        this->schedule(schedule_selector(layer_main::shoot),BULLET_SPEED);
     }
     return true;
 }
+
+
+
+
+
+void layer_main::shoot()
+{
+    CCSprite *sprite_myself_body = (CCSprite*)getChildByTag(SPRITE_MYSELF_BODY);
+    if(sprite_myself_body)
+    {
+        obj_bullet *obj = new obj_bullet;
+        obj->init(sprite_myself_body);
+    }
+}
+
+
+
+
+
+bool layer_main::auto_collide()
+{
+    for (int ii = BULLET_ID[0]; ii <= BULLET_ID[11]; ii++)
+    {
+        
+  
+        CCSprite *sprinte_bullet = (CCSprite*)getChildByTag(ii);
+        if(sprinte_bullet)
+        {
+
+            CCPoint point_bullet = sprinte_bullet->getPosition();
+            if( point_bullet.y >= (SCREEN_HIGH+10) )
+            {
+                this->removeChild(sprinte_bullet, true);
+                if(ii==BULLET_ID[0]){BULLET_A=1;}
+                else if(ii==BULLET_ID[1]){BULLET_B=1;}
+                else if(ii==BULLET_ID[2]){BULLET_C=1;}
+                else if(ii==BULLET_ID[3]){BULLET_D=1;}
+                else if(ii==BULLET_ID[4]){BULLET_E=1;}
+                else if(ii==BULLET_ID[5]){BULLET_F=1;}
+                else if(ii==BULLET_ID[6]){BULLET_G=1;}
+                else if(ii==BULLET_ID[7]){BULLET_H=1;}
+                else if(ii==BULLET_ID[8]){BULLET_I=1;}
+                else if(ii==BULLET_ID[9]){BULLET_J=1;}
+                else if(ii==BULLET_ID[10]){BULLET_K=1;}
+                else if(ii==BULLET_ID[11]){BULLET_L=1;}
+            }
+        }
+    }
+    
+    
+    return true;
+}
+
+
+
+
+bool layer_main::game_start()
+{
+    
+    
+    
+    return true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -108,10 +201,16 @@ bool layer_main::ccTouchBegan(CCTouch *pTouches, CCEvent *pEvent)
     return true;
 }
 
+
+
+
 void layer_main::ccTouchEnded(CCTouch *pTouches, CCEvent *pEvent)
 {
     layer_main::touch = false;
 }
+
+
+
 
 void layer_main::ccTouchMoved(CCTouch *pTouches, CCEvent *pEvent)
 {
