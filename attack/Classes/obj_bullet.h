@@ -24,7 +24,6 @@ public:
     virtual bool auto_bullet(int x, int y, int id);
     
     
-//    CREATE_FUNC(obj_bullet);
 };
 
 #endif /* defined(__attack__obj_bullet__) */

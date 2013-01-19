@@ -19,6 +19,10 @@ extern int SCREEN_WIDTH;
 
 extern char *SPRITE_MYSELF_RESOURCE;
 extern char *SPRITE_BULLET_RESOURCE;
+extern char *SPRITE_DRAGON_01_RESOURCE;
+extern char *SPRITE_DRAGON_02_RESOURCE;
+extern char *SPRITE_ENEMY_HP_RESOURCE;
+extern char *SPRITE_ITEM_GB_RESOURCE;
 
 extern float BULLET_SPEED;
 extern int BULLET_A;
@@ -33,7 +37,20 @@ extern int BULLET_I;
 extern int BULLET_J;
 extern int BULLET_K;
 extern int BULLET_L;
+extern int BULLET_FORCE;
 extern int BULLET_ID[12];
+
+extern int ENEMY_ID[15];
+extern int ENEMY_HP[15];
+extern int ENEMY_MEMBER_MAX;
+extern int ENEMY_MEMBER_SUM_MAX;
+extern int ENEMY_STAT[15];
+extern int ENEMY_SPEED;
+
+extern int SPRITE_ENEMY_BODY_RET[4];
+extern int SPRITE_ENEMY_WIND_RET[4];
+extern int SPRITE_ENEMY_EYES_A_RET[4];
+extern int SPRITE_ENEMY_EYES_B_RET[4];
 
 extern int SPRITE_MYSELF_BODY;
 extern int SPRITE_MYSELF_BODY_RET[4];

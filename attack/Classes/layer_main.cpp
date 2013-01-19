@@ -10,6 +10,7 @@
 #include "SimpleAudioEngine.h"
 #include "obj_myself.h"
 #include "obj_bullet.h"
+#include "obj_enemy.h"
 #include "config.h"
 
 
@@ -83,7 +84,7 @@ bool layer_main::init_myself()
     if(!sprite_myself_body)
     {
         obj_myself::obj_myself();
-        this->unschedule(schedule_selector( layer_main::game_start ));
+        this->unschedule(schedule_selector( layer_main::init_myself ));
         
         this->schedule(schedule_selector(layer_main::shoot),BULLET_SPEED);
     }
@@ -113,11 +114,11 @@ bool layer_main::auto_collide()
     for (int ii = BULLET_ID[0]; ii <= BULLET_ID[11]; ii++)
     {
         
-  
+        
         CCSprite *sprinte_bullet = (CCSprite*)getChildByTag(ii);
         if(sprinte_bullet)
         {
-
+            
             CCPoint point_bullet = sprinte_bullet->getPosition();
             if( point_bullet.y >= (SCREEN_HIGH+10) )
             {
@@ -139,6 +140,173 @@ bool layer_main::auto_collide()
     }
     
     
+    for (int i=0; i<=(ENEMY_MEMBER_SUM_MAX-1); i++)
+    {
+        if(ENEMY_STAT[i] == 2)
+        {
+            CCSprite *sprinte_enemy_body = (CCSprite*)getChildByTag(ENEMY_ID[i]);
+            CCSprite *sprinte_enemy_wind_a = (CCSprite*)getChildByTag(ENEMY_ID[i]+100);
+            CCSprite *sprinte_enemy_wind_b = (CCSprite*)getChildByTag(ENEMY_ID[i]+200);
+            CCSprite *sprinte_enemy_eye_a = (CCSprite*)getChildByTag(ENEMY_ID[i]+300);
+            CCSprite *sprinte_enemy_eye_b = (CCSprite*)getChildByTag(ENEMY_ID[i]+400);
+//            CCProgressTimer *sprinte_enemy_hp = (CCProgressTimer*)getChildByTag(ENEMY_ID[i]+500);
+            
+            for (int ii = BULLET_ID[0]; ii <= BULLET_ID[11]; ii++)
+            {
+                CCSprite *sprinte_bullet = (CCSprite*)getChildByTag(ii);
+                if(sprinte_bullet)
+                {
+                    bool is_collide = false;
+                    if(sprinte_enemy_body)
+                    {
+                        is_collide = CCRect::CCRectIntersectsRect(sprinte_bullet->boundingBox(), sprinte_enemy_body->boundingBox());
+                    }
+
+                    if(is_collide)
+                    {
+                        CCPoint point = sprinte_enemy_body->getPosition();
+                        
+                        int new_value = ENEMY_HP[i]-BULLET_FORCE;
+                        if(new_value <= 0)
+                        {
+                            this->removeChild(sprinte_enemy_body, true);
+                            this->removeChild(sprinte_enemy_wind_a, true);
+                            this->removeChild(sprinte_enemy_wind_b, true);
+                            this->removeChild(sprinte_enemy_eye_a, true);
+                            this->removeChild(sprinte_enemy_eye_b, true);
+                            CCProgressTimer *sprinte_enemy_hp_d = (CCProgressTimer*)getChildByTag(ENEMY_ID[i]+500);
+                            if(sprinte_enemy_hp_d)
+                            {
+                                this->removeChild(sprinte_enemy_hp_d, true);
+                            }
+                            ENEMY_HP[i] = 100;
+                            ENEMY_STAT[i] = 1;
+                        }
+                        CCProgressTimer *sprinte_enemy_hp = (CCProgressTimer*)getChildByTag(ENEMY_ID[i]+500);
+                        if(sprinte_enemy_hp && new_value > 0)
+                        {
+                            sprinte_enemy_hp->setPercentage(ENEMY_HP[i]);
+                            sprinte_enemy_hp->setPosition( ccp(point.x, point.y-20) );
+                            sprinte_enemy_hp->setType(kCCProgressTimerTypeBar);
+                            CCFiniteTimeAction *action_1 = CCMoveTo::create((ENEMY_SPEED*(point.y-1))/520,ccp(point.x,0));
+                            sprinte_enemy_hp->runAction(action_1);
+                            CCProgressTo *to = CCProgressTo::actionWithDuration(0.1, new_value);
+                            sprinte_enemy_hp->runAction(to);
+                            ENEMY_HP[i]= ENEMY_HP[i]-10;
+                        }else
+                        {
+                            CCSprite *sprinte_enemy_body = (CCSprite*)getChildByTag(ENEMY_ID[i]);
+                            if(sprinte_enemy_body)
+                            {
+                                CCProgressTimer *sprinte_enemy_hp = CCProgressTimer::progressWithSprite(CCSprite::create(SPRITE_ENEMY_HP_RESOURCE));
+                                sprinte_enemy_hp->setPercentage(ENEMY_HP[i]);
+                                sprinte_enemy_hp->setPosition( ccp(point.x, point.y-20) );
+                                sprinte_enemy_hp->setType(kCCProgressTimerTypeBar);
+                                sprinte_enemy_hp->setScale(global_scale);
+                                sprinte_enemy_hp->setMidpoint(ccp(0,0));
+                                sprinte_enemy_hp->setBarChangeRate(ccp(1,0));
+                                this->addChild(sprinte_enemy_hp,0,ENEMY_ID[i]+500);
+                                CCFiniteTimeAction *action_1 = CCMoveTo::create((ENEMY_SPEED*(point.y-1))/520,ccp(point.x,0));
+                                sprinte_enemy_hp->runAction(action_1);
+                                
+                                CCProgressTo *to = CCProgressTo::actionWithDuration(0.1, new_value);
+                                sprinte_enemy_hp->runAction(to);
+                                ENEMY_HP[i]= ENEMY_HP[i]-10;
+                            }
+                            
+                        }
+                        
+                        
+                        
+                        
+                        CCSprite *item_gb = new CCSprite();
+                        item_gb->initWithFile(SPRITE_ITEM_GB_RESOURCE);
+                        item_gb->setPosition( ccp(point.x, point.y) );
+                        item_gb->setScale(global_scale);
+                        this->addChild(item_gb, 0,ENEMY_ID[i]+600);
+                        CCJumpTo* mJumpTo = CCJumpTo::actionWithDuration(2.0f, ccp(280, 1), 230.0f, 1);
+                        CCActionInterval*  seq_aa = (CCActionInterval*)(CCSequence::actions(mJumpTo, NULL));
+                        item_gb->runAction(seq_aa);
+                    }
+                }
+            }
+        }
+        CCSprite *sprinte_enemy_body = (CCSprite*)getChildByTag(ENEMY_ID[i]);
+        CCSprite *sprinte_enemy_wind_a = (CCSprite*)getChildByTag(ENEMY_ID[i]+100);
+        CCSprite *sprinte_enemy_wind_b = (CCSprite*)getChildByTag(ENEMY_ID[i]+200);
+        CCSprite *sprinte_enemy_eye_a = (CCSprite*)getChildByTag(ENEMY_ID[i]+300);
+        CCSprite *sprinte_enemy_eye_b = (CCSprite*)getChildByTag(ENEMY_ID[i]+400);
+       
+            if(sprinte_enemy_body)
+            {
+                CCPoint point_enemy_body = sprinte_enemy_body->getPosition();
+                if( point_enemy_body.y <= 5)
+                {
+                    this->removeChild(sprinte_enemy_body, true);
+                }
+            }
+            if(sprinte_enemy_wind_a)
+            {
+                CCPoint point_enemy_wind_a = sprinte_enemy_wind_a->getPosition();
+                if( point_enemy_wind_a.y <= 5)
+                {
+                    this->removeChild(sprinte_enemy_wind_a, true);
+                }
+            }
+            if(sprinte_enemy_wind_b)
+            {
+                CCPoint point_enemy_wind_b = sprinte_enemy_wind_b->getPosition();
+                if( point_enemy_wind_b.y <= 5)
+                {
+                    this->removeChild(sprinte_enemy_wind_b, true);
+                }
+            }
+            if(sprinte_enemy_eye_a)
+            {
+                CCPoint point_enemy_eye_a = sprinte_enemy_eye_a->getPosition();
+                if( point_enemy_eye_a.y <= 10)
+                {
+                    this->removeChild(sprinte_enemy_eye_a, true);
+                }
+            }
+            if(sprinte_enemy_eye_b)
+            {
+                CCPoint point_enemy_eye_b = sprinte_enemy_eye_b->getPosition();
+                if( point_enemy_eye_b.y <= 10)
+                {
+                    this->removeChild(sprinte_enemy_eye_b, true);
+                }
+            }
+            CCSprite *sprinte_item_gb = (CCSprite*)getChildByTag(ENEMY_ID[i]+600);
+            if(sprinte_item_gb)
+            {
+                CCPoint a = sprinte_item_gb->getPosition();
+                if( a.y <= 5)
+                {
+                    this->removeChild(sprinte_item_gb, true);
+                }
+            }
+            CCProgressTimer *sprinte_enemy_hp_end = (CCProgressTimer*)getChildByTag(ENEMY_ID[i]+500);
+            if(sprinte_enemy_hp_end)
+            {
+                CCPoint point_enemy_hp = sprinte_enemy_hp_end->getPosition();
+                if( point_enemy_hp.y <= 5)
+                {
+                    this->removeChild(sprinte_enemy_hp_end, true);
+                    ENEMY_HP[i] = 100;
+                    ENEMY_STAT[i] = 1;
+                }
+            }
+
+            
+    }
+    
+    
+    
+    
+    
+     
+    
     return true;
 }
 
@@ -147,9 +315,8 @@ bool layer_main::auto_collide()
 
 bool layer_main::game_start()
 {
-    
-    
-    
+    obj_enemy *obj_e = new obj_enemy;
+    obj_e->init();
     return true;
 }
 
