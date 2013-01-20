@@ -10,6 +10,7 @@
 #define __attack__config__
 
 #include <iostream>
+#include "SimpleAudioEngine.h"
 
 using namespace std;
 
@@ -23,6 +24,11 @@ extern char *SPRITE_DRAGON_01_RESOURCE;
 extern char *SPRITE_DRAGON_02_RESOURCE;
 extern char *SPRITE_ENEMY_HP_RESOURCE;
 extern char *SPRITE_ITEM_GB_RESOURCE;
+
+
+extern char *MUSIC_BACKGROUND_FIGHT_RESOURCE;
+extern char *MUSIC_GET_ITEM_GB_RESOURCE;
+extern char *MUSIC_ENEMY_HITTED_RESOURCE;
 
 extern float BULLET_SPEED;
 extern int BULLET_A;

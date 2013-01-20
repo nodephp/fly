@@ -208,6 +208,10 @@
 		CB684E7F16A3D3040007B9AA /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB684E7E16A3D3040007B9AA /* AppDelegate.cpp */; };
 		CB684E8216A3D3040007B9AA /* game_bj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB684E8116A3D3040007B9AA /* game_bj.cpp */; };
 		CB8D194916A55C23006F5CAC /* sunny_01.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB8D194816A55C23006F5CAC /* sunny_01.plist */; };
+		CB8D3E0516AC129600B2D2A5 /* get_coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = CB8D3E0416AC129600B2D2A5 /* get_coin.wav */; };
+		CB8D3E0916AC14D800B2D2A5 /* dragon_flight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CB8D3E0716AC14D800B2D2A5 /* dragon_flight.mp3 */; };
+		CB8D3E0A16AC14D800B2D2A5 /* dragon_flight2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CB8D3E0816AC14D800B2D2A5 /* dragon_flight2.mp3 */; };
+		CB8D3E0C16AC16BE00B2D2A5 /* fire_explo.wav in Resources */ = {isa = PBXBuildFile; fileRef = CB8D3E0B16AC16BE00B2D2A5 /* fire_explo.wav */; };
 		CB9FBFCC16A8DC9F00ADAF04 /* config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB9FBFCA16A8DC9F00ADAF04 /* config.cpp */; };
 		CBA21F9516A75AA90092AFB9 /* bullet_01_02.png in Resources */ = {isa = PBXBuildFile; fileRef = CBA21F8E16A75AA90092AFB9 /* bullet_01_02.png */; };
 		CBA21F9616A75AA90092AFB9 /* dragon_01.png in Resources */ = {isa = PBXBuildFile; fileRef = CBA21F8F16A75AA90092AFB9 /* dragon_01.png */; };
@@ -666,6 +670,10 @@
 		CB684E8016A3D3040007B9AA /* game_bj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = game_bj.h; path = Classes/game_bj.h; sourceTree = "<group>"; };
 		CB684E8116A3D3040007B9AA /* game_bj.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = game_bj.cpp; path = Classes/game_bj.cpp; sourceTree = "<group>"; };
 		CB8D194816A55C23006F5CAC /* sunny_01.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sunny_01.plist; sourceTree = "<group>"; };
+		CB8D3E0416AC129600B2D2A5 /* get_coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = get_coin.wav; path = Resources/test/get_coin.wav; sourceTree = "<group>"; };
+		CB8D3E0716AC14D800B2D2A5 /* dragon_flight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dragon_flight.mp3; path = Resources/test/dragon_flight.mp3; sourceTree = "<group>"; };
+		CB8D3E0816AC14D800B2D2A5 /* dragon_flight2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dragon_flight2.mp3; path = Resources/test/dragon_flight2.mp3; sourceTree = "<group>"; };
+		CB8D3E0B16AC16BE00B2D2A5 /* fire_explo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = fire_explo.wav; path = Resources/test/fire_explo.wav; sourceTree = "<group>"; };
 		CB9FBFCA16A8DC9F00ADAF04 /* config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = config.cpp; path = Classes/config.cpp; sourceTree = "<group>"; };
 		CB9FBFCB16A8DC9F00ADAF04 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = Classes/config.h; sourceTree = "<group>"; };
 		CBA21F8E16A75AA90092AFB9 /* bullet_01_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullet_01_02.png; path = Resources/test/bullet_01_02.png; sourceTree = "<group>"; };
@@ -756,6 +764,10 @@
 		CB684BE016A3D3010007B9AA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CB8D3E0B16AC16BE00B2D2A5 /* fire_explo.wav */,
+				CB8D3E0716AC14D800B2D2A5 /* dragon_flight.mp3 */,
+				CB8D3E0816AC14D800B2D2A5 /* dragon_flight2.mp3 */,
+				CB8D3E0416AC129600B2D2A5 /* get_coin.wav */,
 				CBA21F8E16A75AA90092AFB9 /* bullet_01_02.png */,
 				CBA21F8F16A75AA90092AFB9 /* dragon_01.png */,
 				CBA21F9016A75AA90092AFB9 /* dragon_02.png */,
@@ -1687,6 +1699,10 @@
 				CBA21F9916A75AA90092AFB9 /* item_coin.png in Resources */,
 				CBA21F9A16A75AA90092AFB9 /* Space1.png in Resources */,
 				CBA21F9B16A75AA90092AFB9 /* sunny_01.png in Resources */,
+				CB8D3E0516AC129600B2D2A5 /* get_coin.wav in Resources */,
+				CB8D3E0916AC14D800B2D2A5 /* dragon_flight.mp3 in Resources */,
+				CB8D3E0A16AC14D800B2D2A5 /* dragon_flight2.mp3 in Resources */,
+				CB8D3E0C16AC16BE00B2D2A5 /* fire_explo.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

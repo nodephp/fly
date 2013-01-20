@@ -19,6 +19,10 @@ char *SPRITE_DRAGON_02_RESOURCE              = "dragon_02.png";
 char *SPRITE_ENEMY_HP_RESOURCE               = "hatchling_exp_02.png";
 char *SPRITE_ITEM_GB_RESOURCE                = "item_coin.png";
 
+char *MUSIC_BACKGROUND_FIGHT_RESOURCE        = "dragon_flight.mp3";
+char *MUSIC_GET_ITEM_GB_RESOURCE             = "get_coin.wav";
+char *MUSIC_ENEMY_HITTED_RESOURCE            = "fire_explo.wav";
+
 float BULLET_SPEED                                = 0.1;
 int BULLET_A                                      = 1;
 int BULLET_B                                      = 1;
@@ -33,7 +37,7 @@ int BULLET_J                                      = 1;
 int BULLET_K                                      = 1;
 int BULLET_L                                      = 1;
 int BULLET_ID[12]                                 = {101,102,103,104,105,106,107,108,109,110,111,112};
-int BULLET_FORCE                                  = 10;
+int BULLET_FORCE                                  = 1;
 
 int ENEMY_ID[15]                                  = {10001,10002,10003,10004,10005,10006,
                                                     10007,10008,10009,10010,10011,10012,

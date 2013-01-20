@@ -53,19 +53,22 @@ bool layer_main::init()
     this->setTouchEnabled(true);
     
     
+    
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(MUSIC_GET_ITEM_GB_RESOURCE);
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(MUSIC_ENEMY_HITTED_RESOURCE);
+    
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(MUSIC_BACKGROUND_FIGHT_RESOURCE);
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(MUSIC_BACKGROUND_FIGHT_RESOURCE,true);
+    
+    
+    
+    
     //初始化自己
     this->schedule(schedule_selector(layer_main::init_myself),0.5);
-    
-    
-    
     //碰撞控制
     this->schedule(schedule_selector(layer_main::auto_collide),0.1);
-    
-    
     //出怪
-    this->schedule(schedule_selector(layer_main::game_start),5);
-    
-    
+    this->schedule(schedule_selector(layer_main::game_start),3);
     
     return true;
 }
@@ -142,6 +145,8 @@ bool layer_main::auto_collide()
     
     for (int i=0; i<=(ENEMY_MEMBER_SUM_MAX-1); i++)
     {
+        CCSprite *sprinte_myself = (CCSprite*)getChildByTag(SPRITE_MYSELF_BODY);
+        
         if(ENEMY_STAT[i] == 2)
         {
             CCSprite *sprinte_enemy_body = (CCSprite*)getChildByTag(ENEMY_ID[i]);
@@ -181,6 +186,17 @@ bool layer_main::auto_collide()
                             }
                             ENEMY_HP[i] = 100;
                             ENEMY_STAT[i] = 1;
+                            
+                            CCSprite *item_gb = new CCSprite();
+                            item_gb->initWithFile(SPRITE_ITEM_GB_RESOURCE);
+                            item_gb->setPosition( ccp(point.x, point.y) );
+                            item_gb->setScale(global_scale);
+                            this->addChild(item_gb, 0,ENEMY_ID[i]+600);
+                            
+                            int rand_item_gb_x = 0 + rand() % (SCREEN_WIDTH-0+1) ;
+                            CCJumpTo* mJumpTo = CCJumpTo::actionWithDuration(2.0f, ccp(rand_item_gb_x, 1), 230.0f, 1);
+                            CCActionInterval*  seq_aa = (CCActionInterval*)(CCSequence::actions(mJumpTo, NULL));
+                            item_gb->runAction(seq_aa);
                         }
                         CCProgressTimer *sprinte_enemy_hp = (CCProgressTimer*)getChildByTag(ENEMY_ID[i]+500);
                         if(sprinte_enemy_hp && new_value > 0)
@@ -193,6 +209,7 @@ bool layer_main::auto_collide()
                             CCProgressTo *to = CCProgressTo::actionWithDuration(0.1, new_value);
                             sprinte_enemy_hp->runAction(to);
                             ENEMY_HP[i]= ENEMY_HP[i]-10;
+                            CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(MUSIC_ENEMY_HITTED_RESOURCE,false);
                         }else
                         {
                             CCSprite *sprinte_enemy_body = (CCSprite*)getChildByTag(ENEMY_ID[i]);
@@ -212,6 +229,7 @@ bool layer_main::auto_collide()
                                 CCProgressTo *to = CCProgressTo::actionWithDuration(0.1, new_value);
                                 sprinte_enemy_hp->runAction(to);
                                 ENEMY_HP[i]= ENEMY_HP[i]-10;
+                                CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(MUSIC_ENEMY_HITTED_RESOURCE,false);
                             }
                             
                         }
@@ -219,14 +237,7 @@ bool layer_main::auto_collide()
                         
                         
                         
-                        CCSprite *item_gb = new CCSprite();
-                        item_gb->initWithFile(SPRITE_ITEM_GB_RESOURCE);
-                        item_gb->setPosition( ccp(point.x, point.y) );
-                        item_gb->setScale(global_scale);
-                        this->addChild(item_gb, 0,ENEMY_ID[i]+600);
-                        CCJumpTo* mJumpTo = CCJumpTo::actionWithDuration(2.0f, ccp(280, 1), 230.0f, 1);
-                        CCActionInterval*  seq_aa = (CCActionInterval*)(CCSequence::actions(mJumpTo, NULL));
-                        item_gb->runAction(seq_aa);
+                        
                     }
                 }
             }
@@ -243,6 +254,7 @@ bool layer_main::auto_collide()
                 if( point_enemy_body.y <= 5)
                 {
                     this->removeChild(sprinte_enemy_body, true);
+                    ENEMY_STAT[i] = 1;
                 }
             }
             if(sprinte_enemy_wind_a)
@@ -297,15 +309,29 @@ bool layer_main::auto_collide()
                     ENEMY_STAT[i] = 1;
                 }
             }
+    
+        //吃金币
+        if(sprinte_item_gb)
+        {
+            bool is_had_gb = CCRect::CCRectIntersectsRect(sprinte_item_gb->boundingBox(), sprinte_myself->boundingBox());
+            if(is_had_gb)
+            {
+                CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(MUSIC_GET_ITEM_GB_RESOURCE,false);
+            }
+        }
+        
 
-            
+        
     }
+   
+    
+    
+    //被敌人击中
     
     
     
     
     
-     
     
     return true;
 }
