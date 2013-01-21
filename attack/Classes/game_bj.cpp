@@ -90,7 +90,7 @@ bool game_bj::init()
 //    animation->setLoops(-1);  //设置为无限循环
 //    pMyself_wind_a->runAction(CCAnimate::create(animation));
 //    pMyself_wind_b->runAction(CCAnimate::create(animation));
-
+//
 //    CCFiniteTimeAction *putdown_a = CCRotateTo::actionWithDuration(0.3, -30);
 //    CCRepeat *fz3d_a = CCRepeat::actionWithAction(putdown_a, -1);
 //    

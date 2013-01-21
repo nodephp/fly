@@ -12,6 +12,11 @@ float global_scale = 0.45;
 int SCREEN_HIGH    = 480;
 int SCREEN_WIDTH   = 320;
 
+int MY_SCORE_GB    = 0;
+int MY_SCORE       = 0;
+char MY_SCORE_UPDATE[1];
+char MY_SCORE_GB_UPDATE[1];
+
 char *SPRITE_MYSELF_RESOURCE                 = "sunny_01.png";
 char *SPRITE_BULLET_RESOURCE                 = "bullet_01_02.png";
 char *SPRITE_DRAGON_01_RESOURCE              = "dragon_01.png";
@@ -22,6 +27,7 @@ char *SPRITE_ITEM_GB_RESOURCE                = "item_coin.png";
 char *MUSIC_BACKGROUND_FIGHT_RESOURCE        = "dragon_flight.mp3";
 char *MUSIC_GET_ITEM_GB_RESOURCE             = "get_coin.wav";
 char *MUSIC_ENEMY_HITTED_RESOURCE            = "fire_explo.wav";
+
 
 float BULLET_SPEED                                = 0.1;
 int BULLET_A                                      = 1;

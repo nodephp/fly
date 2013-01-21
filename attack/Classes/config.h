@@ -17,6 +17,11 @@ using namespace std;
 extern float global_scale;
 extern int SCREEN_HIGH;
 extern int SCREEN_WIDTH;
+extern int MY_SCORE_GB;
+extern int MY_SCORE;
+
+extern char MY_SCORE_UPDATE[1];
+extern char MY_SCORE_GB_UPDATE[1];
 
 extern char *SPRITE_MYSELF_RESOURCE;
 extern char *SPRITE_BULLET_RESOURCE;

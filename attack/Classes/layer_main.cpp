@@ -12,6 +12,7 @@
 #include "obj_bullet.h"
 #include "obj_enemy.h"
 #include "config.h"
+#include "cj_2.h"
 
 
 cocos2d::CCLayer *layer_m = NULL;
@@ -37,6 +38,8 @@ CCScene* layer_main::scene()
     
     layer_m = layer_main;
     
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(MUSIC_BACKGROUND_FIGHT_RESOURCE);
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(MUSIC_BACKGROUND_FIGHT_RESOURCE,true);
 
     
     return scene;
@@ -52,13 +55,14 @@ bool layer_main::init()
     }
     this->setTouchEnabled(true);
     
-    
+    MY_SCORE = 0;
+    sprintf(MY_SCORE_UPDATE, "%d", MY_SCORE);
     
     CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(MUSIC_GET_ITEM_GB_RESOURCE);
     CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(MUSIC_ENEMY_HITTED_RESOURCE);
     
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(MUSIC_BACKGROUND_FIGHT_RESOURCE);
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(MUSIC_BACKGROUND_FIGHT_RESOURCE,true);
+    
+    
     
     
     
@@ -69,6 +73,32 @@ bool layer_main::init()
     this->schedule(schedule_selector(layer_main::auto_collide),0.1);
     //出怪
     this->schedule(schedule_selector(layer_main::game_start),3);
+    
+    
+    CCLabelTTF *label = CCLabelTTF::create("GOLD:", "Marker Felt", 21);
+    this->addChild(label,100,9998);
+    label->setPosition(ccp(240, 450));
+    label->setColor( ccYELLOW );
+    
+    
+    CCLabelBMFont *lbEnemy = CCLabelBMFont::labelWithString("0", "font09.fnt");
+    lbEnemy->setAnchorPoint(ccp(0, 1));
+    lbEnemy->setScale(0.8f);
+    lbEnemy->setPosition(ccp(270, 450));
+    this->addChild(lbEnemy, 100, 9999);
+    
+    CCLabelTTF *label_2 = CCLabelTTF::create("SCORE:", "Marker Felt", 21);
+    this->addChild(label_2,100,9998);
+    label_2->setPosition(ccp(30, 450));
+    label_2->setColor( ccYELLOW );
+    
+    
+    CCLabelBMFont *lbEnemy_2 = CCLabelBMFont::labelWithString("0", "font09.fnt");
+    lbEnemy_2->setAnchorPoint(ccp(0, 1));
+    lbEnemy_2->setScale(0.8f);
+    lbEnemy_2->setPosition(ccp(90, 450));
+    this->addChild(lbEnemy_2, 100, 9990);
+    
     
     return true;
 }
@@ -114,6 +144,13 @@ void layer_main::shoot()
 
 bool layer_main::auto_collide()
 {
+    MY_SCORE += 10;
+    sprintf(MY_SCORE_UPDATE, "%d", MY_SCORE);
+    CCLabelBMFont *view_gb = (CCLabelBMFont*)getChildByTag(9990);
+    view_gb->CCLabelBMFont::setString(MY_SCORE_UPDATE);
+    
+    
+    
     for (int ii = BULLET_ID[0]; ii <= BULLET_ID[11]; ii++)
     {
         
@@ -186,6 +223,7 @@ bool layer_main::auto_collide()
                             }
                             ENEMY_HP[i] = 100;
                             ENEMY_STAT[i] = 1;
+                            MY_SCORE += 10;
                             
                             CCSprite *item_gb = new CCSprite();
                             item_gb->initWithFile(SPRITE_ITEM_GB_RESOURCE);
@@ -317,9 +355,79 @@ bool layer_main::auto_collide()
             if(is_had_gb)
             {
                 CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(MUSIC_GET_ITEM_GB_RESOURCE,false);
+                MY_SCORE_GB += 1;
+                sprintf(MY_SCORE_GB_UPDATE, "%d", MY_SCORE_GB);
+                CCLabelBMFont *view_gb = (CCLabelBMFont*)getChildByTag(9999);
+                view_gb->CCLabelBMFont::setString(MY_SCORE_GB_UPDATE);
+                this->removeChild(sprinte_item_gb, true);
+
             }
         }
         
+        if(sprinte_enemy_body)
+        {
+            bool is_head = CCRect::CCRectIntersectsRect(sprinte_enemy_body->boundingBox(), sprinte_myself->boundingBox());
+            
+            if(is_head)
+            {
+                BULLET_A=1;
+                BULLET_B=1;
+                BULLET_C=1;
+                BULLET_D=1;
+                BULLET_E=1;
+                BULLET_F=1;
+                BULLET_G=1;
+                BULLET_H=1;
+                BULLET_I=1;
+                BULLET_J=1;
+                BULLET_K=1;
+                BULLET_L=1;
+
+                ENEMY_HP[0]  = 100;
+                ENEMY_HP[1]  = 100;
+                ENEMY_HP[2]  = 100;
+                ENEMY_HP[3]  = 100;
+                ENEMY_HP[4]  = 100;
+                ENEMY_HP[5]  = 100;
+                ENEMY_HP[6]  = 100;
+                ENEMY_HP[7]  = 100;
+                ENEMY_HP[8]  = 100;
+                ENEMY_HP[9]  = 100;
+                ENEMY_HP[10]  = 100;
+                ENEMY_HP[11]  = 100;
+                ENEMY_HP[12]  = 100;
+                ENEMY_HP[13]  = 100;
+                ENEMY_HP[14]  = 100;
+
+                ENEMY_STAT[0]  = 1;
+                ENEMY_STAT[1]  = 1;
+                ENEMY_STAT[2]  = 1;
+                ENEMY_STAT[3]  = 1;
+                ENEMY_STAT[4]  = 1;
+                ENEMY_STAT[5]  = 1;
+                ENEMY_STAT[6]  = 1;
+                ENEMY_STAT[7]  = 1;
+                ENEMY_STAT[8]  = 1;
+                ENEMY_STAT[9]  = 1;
+                ENEMY_STAT[10]  = 1;
+                ENEMY_STAT[11]  = 1;
+                ENEMY_STAT[12]  = 1;
+                ENEMY_STAT[13]  = 1;
+                ENEMY_STAT[14]  = 1;
+                
+                
+                
+                
+                CCDirector *pDirector = CCDirector::sharedDirector();
+                cj_2 *layer_cj_2 = new cj_2();
+                CCScene *pScene = layer_cj_2->scene();
+                pDirector->replaceScene(pScene);
+                
+            }
+            
+            
+            
+        }
 
         
     }

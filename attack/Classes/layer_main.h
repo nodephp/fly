@@ -17,7 +17,7 @@
 #include <stdlib.h>
 
 //#include "obj_myself.h"
-
+using namespace std;
 
 extern cocos2d::CCLayer *layer_m;
 

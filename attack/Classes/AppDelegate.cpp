@@ -10,7 +10,7 @@
 
 #include "cocos2d.h"
 #include "game_bj.h"
-#include "layer_main.h"
+#include "cj_1.h"
 
 USING_NS_CC;
 
@@ -47,7 +47,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 //    CCScene *pScene = layer_main->scene();
 //    pDirector->replaceScene(pScene);
     
-    CCScene *pScene = layer_main::scene();
+    CCScene *pScene = cj_1::scene();
     pDirector->runWithScene(pScene);
 
     return true;

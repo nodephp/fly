@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB594E3216ACD6250034A366 /* font09.fnt in Resources */ = {isa = PBXBuildFile; fileRef = CB594E3016ACD6240034A366 /* font09.fnt */; };
+		CB594E3316ACD6250034A366 /* font09.png in Resources */ = {isa = PBXBuildFile; fileRef = CB594E3116ACD6240034A366 /* font09.png */; };
 		CB684BD016A3D3010007B9AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB684BCF16A3D3000007B9AA /* QuartzCore.framework */; };
 		CB684BD216A3D3010007B9AA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB684BD116A3D3010007B9AA /* OpenGLES.framework */; };
 		CB684BD416A3D3010007B9AA /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB684BD316A3D3010007B9AA /* OpenAL.framework */; };
@@ -226,9 +228,15 @@
 		CBA21FDB16A761050092AFB9 /* obj_enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBA21FD916A761050092AFB9 /* obj_enemy.cpp */; };
 		CBA21FDE16A761270092AFB9 /* obj_myself.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBA21FDC16A761270092AFB9 /* obj_myself.cpp */; };
 		CBA21FE116A761370092AFB9 /* server_http.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBA21FDF16A761370092AFB9 /* server_http.cpp */; };
+		CBA5B1BB16AD43AF00B0925F /* cj_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBA5B1B916AD43AF00B0925F /* cj_1.cpp */; };
+		CBA5B1BF16AD43D700B0925F /* cj_2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBA5B1BD16AD43D700B0925F /* cj_2.cpp */; };
+		CBA5B1C116AD57B700B0925F /* character_01.png in Resources */ = {isa = PBXBuildFile; fileRef = CBA5B1C016AD57B700B0925F /* character_01.png */; };
+		CBA5B1C316AD5B6700B0925F /* sd_01.png in Resources */ = {isa = PBXBuildFile; fileRef = CBA5B1C216AD5B6700B0925F /* sd_01.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB594E3016ACD6240034A366 /* font09.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = font09.fnt; path = Resources/test/font09.fnt; sourceTree = "<group>"; };
+		CB594E3116ACD6240034A366 /* font09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = font09.png; path = Resources/test/font09.png; sourceTree = "<group>"; };
 		CB684BCB16A3D3000007B9AA /* attack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = attack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB684BCF16A3D3000007B9AA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CB684BD116A3D3010007B9AA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -695,6 +703,12 @@
 		CBA21FDD16A761270092AFB9 /* obj_myself.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = obj_myself.h; path = Classes/obj_myself.h; sourceTree = "<group>"; };
 		CBA21FDF16A761370092AFB9 /* server_http.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = server_http.cpp; path = Classes/server_http.cpp; sourceTree = "<group>"; };
 		CBA21FE016A761370092AFB9 /* server_http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = server_http.h; path = Classes/server_http.h; sourceTree = "<group>"; };
+		CBA5B1B916AD43AF00B0925F /* cj_1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cj_1.cpp; path = Classes/cj_1.cpp; sourceTree = "<group>"; };
+		CBA5B1BA16AD43AF00B0925F /* cj_1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cj_1.h; path = Classes/cj_1.h; sourceTree = "<group>"; };
+		CBA5B1BD16AD43D700B0925F /* cj_2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cj_2.cpp; path = Classes/cj_2.cpp; sourceTree = "<group>"; };
+		CBA5B1BE16AD43D700B0925F /* cj_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cj_2.h; path = Classes/cj_2.h; sourceTree = "<group>"; };
+		CBA5B1C016AD57B700B0925F /* character_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = character_01.png; sourceTree = "<group>"; };
+		CBA5B1C216AD5B6700B0925F /* sd_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sd_01.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -764,6 +778,10 @@
 		CB684BE016A3D3010007B9AA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CBA5B1C216AD5B6700B0925F /* sd_01.png */,
+				CBA5B1C016AD57B700B0925F /* character_01.png */,
+				CB594E3016ACD6240034A366 /* font09.fnt */,
+				CB594E3116ACD6240034A366 /* font09.png */,
 				CB8D3E0B16AC16BE00B2D2A5 /* fire_explo.wav */,
 				CB8D3E0716AC14D800B2D2A5 /* dragon_flight.mp3 */,
 				CB8D3E0816AC14D800B2D2A5 /* dragon_flight2.mp3 */,
@@ -1625,6 +1643,10 @@
 				CBA21FE016A761370092AFB9 /* server_http.h */,
 				CB9FBFCA16A8DC9F00ADAF04 /* config.cpp */,
 				CB9FBFCB16A8DC9F00ADAF04 /* config.h */,
+				CBA5B1B916AD43AF00B0925F /* cj_1.cpp */,
+				CBA5B1BA16AD43AF00B0925F /* cj_1.h */,
+				CBA5B1BD16AD43D700B0925F /* cj_2.cpp */,
+				CBA5B1BE16AD43D700B0925F /* cj_2.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1703,6 +1725,10 @@
 				CB8D3E0916AC14D800B2D2A5 /* dragon_flight.mp3 in Resources */,
 				CB8D3E0A16AC14D800B2D2A5 /* dragon_flight2.mp3 in Resources */,
 				CB8D3E0C16AC16BE00B2D2A5 /* fire_explo.wav in Resources */,
+				CB594E3216ACD6250034A366 /* font09.fnt in Resources */,
+				CB594E3316ACD6250034A366 /* font09.png in Resources */,
+				CBA5B1C116AD57B700B0925F /* character_01.png in Resources */,
+				CBA5B1C316AD5B6700B0925F /* sd_01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1899,6 +1925,8 @@
 				CBA21FDE16A761270092AFB9 /* obj_myself.cpp in Sources */,
 				CBA21FE116A761370092AFB9 /* server_http.cpp in Sources */,
 				CB9FBFCC16A8DC9F00ADAF04 /* config.cpp in Sources */,
+				CBA5B1BB16AD43AF00B0925F /* cj_1.cpp in Sources */,
+				CBA5B1BF16AD43D700B0925F /* cj_2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
