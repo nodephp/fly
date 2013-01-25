@@ -38,6 +38,9 @@ public:
     bool touch = false;
     static float scale;
     
+    virtual bool meteo_1();
+    virtual bool meteo_2();
+    
     
     void registerWithTouchDispatcher();
     

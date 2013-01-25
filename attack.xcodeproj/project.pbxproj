@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB470C4516AE991000D74C5A /* meteo.png in Resources */ = {isa = PBXBuildFile; fileRef = CB470C4316AE991000D74C5A /* meteo.png */; };
+		CB470C4616AE991000D74C5A /* warn_line.png in Resources */ = {isa = PBXBuildFile; fileRef = CB470C4416AE991000D74C5A /* warn_line.png */; };
+		CB470C4A16AE9A4400D74C5A /* booster_run_01.png in Resources */ = {isa = PBXBuildFile; fileRef = CB470C4816AE9A4400D74C5A /* booster_run_01.png */; };
+		CB470C4B16AE9A4400D74C5A /* dust_02.png in Resources */ = {isa = PBXBuildFile; fileRef = CB470C4916AE9A4400D74C5A /* dust_02.png */; };
+		CB470C5116AE9EF000D74C5A /* meteo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB470C4F16AE9EEF00D74C5A /* meteo.cpp */; };
+		CB470C5716AEDB3800D74C5A /* alert_big.wav in Resources */ = {isa = PBXBuildFile; fileRef = CB470C5616AEDB3800D74C5A /* alert_big.wav */; };
+		CB4A94A116AFC29800F54ABF /* avata_1.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4A94A016AFC29800F54ABF /* avata_1.png */; };
+		CB5136BF16AF82F900377E2D /* Space2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5136BE16AF82F900377E2D /* Space2.png */; };
 		CB594E3216ACD6250034A366 /* font09.fnt in Resources */ = {isa = PBXBuildFile; fileRef = CB594E3016ACD6240034A366 /* font09.fnt */; };
 		CB594E3316ACD6250034A366 /* font09.png in Resources */ = {isa = PBXBuildFile; fileRef = CB594E3116ACD6240034A366 /* font09.png */; };
 		CB684BD016A3D3010007B9AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB684BCF16A3D3000007B9AA /* QuartzCore.framework */; };
@@ -235,6 +243,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB13472716B0C9C600595827 /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
+		CB13472816B0C9C600595827 /* filestream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filestream.h; sourceTree = "<group>"; };
+		CB13472A16B0C9C600595827 /* pow10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pow10.h; sourceTree = "<group>"; };
+		CB13472B16B0C9C600595827 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		CB13472C16B0C9C600595827 /* strfunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strfunc.h; sourceTree = "<group>"; };
+		CB13472D16B0C9C600595827 /* prettywriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prettywriter.h; sourceTree = "<group>"; };
+		CB13472E16B0C9C600595827 /* rapidjson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rapidjson.h; sourceTree = "<group>"; };
+		CB13472F16B0C9C600595827 /* reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reader.h; sourceTree = "<group>"; };
+		CB13473016B0C9C600595827 /* stringbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringbuffer.h; sourceTree = "<group>"; };
+		CB13473116B0C9C600595827 /* writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
+		CB470C4316AE991000D74C5A /* meteo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = meteo.png; path = Resources/test/meteo.png; sourceTree = "<group>"; };
+		CB470C4416AE991000D74C5A /* warn_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = warn_line.png; path = Resources/test/warn_line.png; sourceTree = "<group>"; };
+		CB470C4816AE9A4400D74C5A /* booster_run_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = booster_run_01.png; path = Resources/test/booster_run_01.png; sourceTree = "<group>"; };
+		CB470C4916AE9A4400D74C5A /* dust_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dust_02.png; path = Resources/test/dust_02.png; sourceTree = "<group>"; };
+		CB470C4F16AE9EEF00D74C5A /* meteo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = meteo.cpp; path = Classes/meteo.cpp; sourceTree = "<group>"; };
+		CB470C5016AE9EEF00D74C5A /* meteo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = meteo.h; path = Classes/meteo.h; sourceTree = "<group>"; };
+		CB470C5616AEDB3800D74C5A /* alert_big.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alert_big.wav; sourceTree = "<group>"; };
+		CB4A94A016AFC29800F54ABF /* avata_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avata_1.png; sourceTree = "<group>"; };
+		CB5136BE16AF82F900377E2D /* Space2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Space2.png; sourceTree = "<group>"; };
 		CB594E3016ACD6240034A366 /* font09.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = font09.fnt; path = Resources/test/font09.fnt; sourceTree = "<group>"; };
 		CB594E3116ACD6240034A366 /* font09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = font09.png; path = Resources/test/font09.png; sourceTree = "<group>"; };
 		CB684BCB16A3D3000007B9AA /* attack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = attack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -731,6 +758,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB13472616B0C9C600595827 /* rapidjson */ = {
+			isa = PBXGroup;
+			children = (
+				CB13472716B0C9C600595827 /* document.h */,
+				CB13472816B0C9C600595827 /* filestream.h */,
+				CB13472916B0C9C600595827 /* internal */,
+				CB13472D16B0C9C600595827 /* prettywriter.h */,
+				CB13472E16B0C9C600595827 /* rapidjson.h */,
+				CB13472F16B0C9C600595827 /* reader.h */,
+				CB13473016B0C9C600595827 /* stringbuffer.h */,
+				CB13473116B0C9C600595827 /* writer.h */,
+			);
+			path = rapidjson;
+			sourceTree = "<group>";
+		};
+		CB13472916B0C9C600595827 /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				CB13472A16B0C9C600595827 /* pow10.h */,
+				CB13472B16B0C9C600595827 /* stack.h */,
+				CB13472C16B0C9C600595827 /* strfunc.h */,
+			);
+			path = internal;
+			sourceTree = "<group>";
+		};
 		CB684BC016A3D3000007B9AA = {
 			isa = PBXGroup;
 			children = (
@@ -778,6 +830,13 @@
 		CB684BE016A3D3010007B9AA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CB4A94A016AFC29800F54ABF /* avata_1.png */,
+				CB5136BE16AF82F900377E2D /* Space2.png */,
+				CB470C5616AEDB3800D74C5A /* alert_big.wav */,
+				CB470C4816AE9A4400D74C5A /* booster_run_01.png */,
+				CB470C4916AE9A4400D74C5A /* dust_02.png */,
+				CB470C4316AE991000D74C5A /* meteo.png */,
+				CB470C4416AE991000D74C5A /* warn_line.png */,
 				CBA5B1C216AD5B6700B0925F /* sd_01.png */,
 				CBA5B1C016AD57B700B0925F /* character_01.png */,
 				CB594E3016ACD6240034A366 /* font09.fnt */,
@@ -825,6 +884,7 @@
 		CB684C0116A3D3010007B9AA /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				CB13472616B0C9C600595827 /* rapidjson */,
 				CB684C0216A3D3010007B9AA /* cocos2dx */,
 				CB684DD116A3D3030007B9AA /* CocosDenshion */,
 				CB684DE516A3D3030007B9AA /* extensions */,
@@ -1647,6 +1707,8 @@
 				CBA5B1BA16AD43AF00B0925F /* cj_1.h */,
 				CBA5B1BD16AD43D700B0925F /* cj_2.cpp */,
 				CBA5B1BE16AD43D700B0925F /* cj_2.h */,
+				CB470C4F16AE9EEF00D74C5A /* meteo.cpp */,
+				CB470C5016AE9EEF00D74C5A /* meteo.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1729,6 +1791,13 @@
 				CB594E3316ACD6250034A366 /* font09.png in Resources */,
 				CBA5B1C116AD57B700B0925F /* character_01.png in Resources */,
 				CBA5B1C316AD5B6700B0925F /* sd_01.png in Resources */,
+				CB470C4516AE991000D74C5A /* meteo.png in Resources */,
+				CB470C4616AE991000D74C5A /* warn_line.png in Resources */,
+				CB470C4A16AE9A4400D74C5A /* booster_run_01.png in Resources */,
+				CB470C4B16AE9A4400D74C5A /* dust_02.png in Resources */,
+				CB470C5716AEDB3800D74C5A /* alert_big.wav in Resources */,
+				CB5136BF16AF82F900377E2D /* Space2.png in Resources */,
+				CB4A94A116AFC29800F54ABF /* avata_1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1927,6 +1996,7 @@
 				CB9FBFCC16A8DC9F00ADAF04 /* config.cpp in Sources */,
 				CBA5B1BB16AD43AF00B0925F /* cj_1.cpp in Sources */,
 				CBA5B1BF16AD43D700B0925F /* cj_2.cpp in Sources */,
+				CB470C5116AE9EF000D74C5A /* meteo.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -130,7 +130,7 @@ bool game_bj::init()
 //    this->addChild(m_emitter, 10);
 //    m_emitter->setTexture( CCTextureCache::sharedTextureCache()->addImage("enemy.png"));
 //    m_emitter->setPosition(ccp(150,320));
-////    this->removeChild(m_emitter, true);
+//    this->removeChild(m_emitter, true);
     
     
     auto_enemy('yyy');

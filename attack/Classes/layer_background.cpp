@@ -8,6 +8,7 @@
 
 #include "layer_background.h"
 #include "SimpleAudioEngine.h"
+#include "config.h"
 
 
 using namespace cocos2d;
@@ -34,19 +35,22 @@ bool layer_background::init()
         CC_BREAK_IF(! CCLayer::init());
         s = CCDirector::sharedDirector()->getWinSize();
         
-        m_map1 = CCSprite::create("Space1.png");//分别初始化好两个地图
-        m_map2 = CCSprite::create("Space1.png");
+        
+        CCSpriteBatchNode *batch = CCSpriteBatchNode::create("Space2.png"); 
+        
+        m_map1 = CCSprite::createWithTexture(batch->getTexture());
+        m_map2 = CCSprite::createWithTexture(batch->getTexture());
         
         m_map1->setAnchorPoint(ccp(0,0));
         m_map2->setAnchorPoint(ccp(0,0));
         
-        m_map1->setScaleX(0.5);
-        m_map1->setScaleY(0.472);
-        m_map2->setScaleX(0.5);
-        m_map2->setScaleY(0.472);
+        m_map1->setScaleX(0.95);
+        m_map1->setScaleY(0.95);
+        m_map2->setScaleX(0.95);
+        m_map2->setScaleY(0.95);
         
         m_map1->setPosition(ccp(0,0));
-        m_map2->setPosition(ccp(0,480));//这里注意,我们把第二章地图的位置放在场景的最上方...因为地图是要往下走的..值根据屏幕高度
+        m_map2->setPosition(ccp(0,SCREEN_HIGH));//这里注意,我们把第二章地图的位置放在场景的最上方...因为地图是要往下走的..值根据屏幕高度
         
         this->addChild(m_map1,0,1);
         this->addChild(m_map2,0,2);
@@ -56,6 +60,9 @@ bool layer_background::init()
     } while (0);
     
     
+//    CCSprite *s = CCSprite::create("Space2.png");
+//    this->addChild(s,0,1);
+//    return true;
     
     
     
@@ -73,8 +80,8 @@ void layer_background::update(float dt)
     CCPoint map_2p = m_map2->getPosition();
     
     //每次调用这个函数的时候就设置两张地图的位置..这里的-3值越大也就越快.
-    m_map1->setPosition(ccp(map_1p.x, map_1p.y - 3));
-    m_map2->setPosition(ccp(map_2p.x, map_2p.y - 3));
+    m_map1->setPosition(ccp(map_1p.x, map_1p.y - 5));
+    m_map2->setPosition(ccp(map_2p.x, map_2p.y - 5));
     
     //分别判断地图.如果完全出场景了..马上调整位置接上
     if (map_2p.y < 0)

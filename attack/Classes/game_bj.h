@@ -23,7 +23,7 @@ public:
     int k=1;
     int l=1;
     
-    float scale = 0.45;
+    float scale = 0.95;
     bool touch = false;
     
     int e_11 = 100;

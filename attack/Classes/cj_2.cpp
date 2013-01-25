@@ -89,7 +89,9 @@ bool cj_2::ccTouchBegan(CCTouch *pTouches, CCEvent *pEvent)
     bool ret = CCRect::CCRectContainsPoint(start_btn->boundingBox(), location);
     if(ret)
     {
+        CCTextureCache::sharedTextureCache()->removeAllTextures();
         CCDirector *pDirector = CCDirector::sharedDirector();
+        pDirector->setAnimationInterval(1.0 / 60);
         layer_main *layer_mains = new layer_main();
         CCScene *pScene = layer_mains->scene();
         pDirector->replaceScene(pScene);

@@ -63,14 +63,21 @@ bool obj_myself::init()
     pMyself_wind_b->setScale(global_scale);
     layer_m->addChild(pMyself_wind_b, 0,SPRITE_MYSELF_WIND_B);
 
-    CCActionInterval*  act1_a = CCSkewTo::actionWithDuration(0.3, 22,0);
-    CCActionInterval*  act2_a = CCSkewTo::actionWithDuration(0.3, -22,0);
-    CCActionInterval*  seq_a = (CCActionInterval*)(CCSequence::actions(act1_a, act2_a, NULL));
+    pMyself_wind_a->setAnchorPoint(ccp(1,0));
+    pMyself_wind_b->setAnchorPoint(ccp(0,0));
+    
+    CCActionInterval*  act1_a = CCSkewTo::actionWithDuration(0.3, 15,0);
+    CCActionInterval*  act2_a = CCRotateTo::actionWithDuration(0.3, -20);
+    CCActionInterval*  act3_a = CCRotateTo::actionWithDuration(0.3, -40);
+    CCActionInterval*  act4_a = CCSkewTo::actionWithDuration(0.3, -15,0);
+    CCActionInterval*  seq_a = (CCActionInterval*)(CCSequence::actions(act1_a,act2_a,act4_a,act3_a,NULL));
     CCAction*  rep1 = CCRepeatForever::actionWithAction(seq_a);
     
-    CCActionInterval*  act1_b = CCSkewTo::actionWithDuration(0.3, -22,0);
-    CCActionInterval*  act2_b = CCSkewTo::actionWithDuration(0.3, 22,0);
-    CCActionInterval*  seq_b = (CCActionInterval*)(CCSequence::actions(act1_b, act2_b, NULL));
+    CCActionInterval*  act1_b = CCSkewTo::actionWithDuration(0.3, -15,0);
+    CCActionInterval*  act2_b = CCRotateTo::actionWithDuration(0.3, 20);
+    CCActionInterval*  act3_b = CCRotateTo::actionWithDuration(0.3, 40);
+    CCActionInterval*  act4_b = CCSkewTo::actionWithDuration(0.3, 15,0);
+    CCActionInterval*  seq_b = (CCActionInterval*)(CCSequence::actions(act1_b,act2_b,act4_b,act3_b,NULL));
     CCAction*  rep2 = CCRepeatForever::actionWithAction(seq_b);
     
     pMyself_wind_a->runAction(rep1);

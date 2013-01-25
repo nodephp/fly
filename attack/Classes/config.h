@@ -34,6 +34,7 @@ extern char *SPRITE_ITEM_GB_RESOURCE;
 extern char *MUSIC_BACKGROUND_FIGHT_RESOURCE;
 extern char *MUSIC_GET_ITEM_GB_RESOURCE;
 extern char *MUSIC_ENEMY_HITTED_RESOURCE;
+extern char *MUSIC_ALERT_RESOURCE;
 
 extern float BULLET_SPEED;
 extern int BULLET_A;
@@ -53,6 +54,7 @@ extern int BULLET_ID[12];
 
 extern int ENEMY_ID[15];
 extern int ENEMY_HP[15];
+extern int ENEMY_HP_MAX[15];
 extern int ENEMY_MEMBER_MAX;
 extern int ENEMY_MEMBER_SUM_MAX;
 extern int ENEMY_STAT[15];
@@ -75,7 +77,9 @@ extern int SPRITE_MYSELF_WIND_B;
 extern int SPRITE_MYSELF_WIND_B_RET[4];
 extern int SPRITE_MYSELF_WIND_B_POSITION[2];
 
-
+extern int SPRITE_METEO;
+extern int SPRITE_M_LINE;
+extern int SPRITE_METEO_LIZI;
 
 
 
