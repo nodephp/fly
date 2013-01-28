@@ -33,6 +33,8 @@ public:
     virtual bool init();
     virtual bool init_myself();
     virtual bool game_start();
+    virtual bool boss_start();
+    virtual bool be_attack(int damage);
     virtual void shoot();
     virtual bool auto_collide();
     bool touch = false;
@@ -40,6 +42,9 @@ public:
     
     virtual bool meteo_1();
     virtual bool meteo_2();
+    
+    virtual bool speed_up();
+    virtual bool speed_up_end();
     
     
     void registerWithTouchDispatcher();

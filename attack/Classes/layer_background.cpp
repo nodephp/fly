@@ -44,10 +44,10 @@ bool layer_background::init()
         m_map1->setAnchorPoint(ccp(0,0));
         m_map2->setAnchorPoint(ccp(0,0));
         
-        m_map1->setScaleX(0.95);
-        m_map1->setScaleY(0.95);
-        m_map2->setScaleX(0.95);
-        m_map2->setScaleY(0.95);
+//        m_map1->setScaleX(0.95);
+//        m_map1->setScaleY(1);
+//        m_map2->setScaleX(0.95);
+//        m_map2->setScaleY(1);
         
         m_map1->setPosition(ccp(0,0));
         m_map2->setPosition(ccp(0,SCREEN_HIGH));//这里注意,我们把第二章地图的位置放在场景的最上方...因为地图是要往下走的..值根据屏幕高度
@@ -80,8 +80,8 @@ void layer_background::update(float dt)
     CCPoint map_2p = m_map2->getPosition();
     
     //每次调用这个函数的时候就设置两张地图的位置..这里的-3值越大也就越快.
-    m_map1->setPosition(ccp(map_1p.x, map_1p.y - 5));
-    m_map2->setPosition(ccp(map_2p.x, map_2p.y - 5));
+    m_map1->setPosition(ccp(map_1p.x, map_1p.y - back_ground_speed));
+    m_map2->setPosition(ccp(map_2p.x, map_2p.y - back_ground_speed));
     
     //分别判断地图.如果完全出场景了..马上调整位置接上
     if (map_2p.y < 0)

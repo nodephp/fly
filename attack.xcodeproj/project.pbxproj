@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB0F8B2516B55FB0005566E9 /* speedup.png in Resources */ = {isa = PBXBuildFile; fileRef = CB0F8B2416B55FB0005566E9 /* speedup.png */; };
 		CB470C4516AE991000D74C5A /* meteo.png in Resources */ = {isa = PBXBuildFile; fileRef = CB470C4316AE991000D74C5A /* meteo.png */; };
 		CB470C4616AE991000D74C5A /* warn_line.png in Resources */ = {isa = PBXBuildFile; fileRef = CB470C4416AE991000D74C5A /* warn_line.png */; };
 		CB470C4A16AE9A4400D74C5A /* booster_run_01.png in Resources */ = {isa = PBXBuildFile; fileRef = CB470C4816AE9A4400D74C5A /* booster_run_01.png */; };
@@ -15,6 +16,7 @@
 		CB470C5716AEDB3800D74C5A /* alert_big.wav in Resources */ = {isa = PBXBuildFile; fileRef = CB470C5616AEDB3800D74C5A /* alert_big.wav */; };
 		CB4A94A116AFC29800F54ABF /* avata_1.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4A94A016AFC29800F54ABF /* avata_1.png */; };
 		CB5136BF16AF82F900377E2D /* Space2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5136BE16AF82F900377E2D /* Space2.png */; };
+		CB54492216B644AB00369443 /* item_invincible.png in Resources */ = {isa = PBXBuildFile; fileRef = CB54492116B644AB00369443 /* item_invincible.png */; };
 		CB594E3216ACD6250034A366 /* font09.fnt in Resources */ = {isa = PBXBuildFile; fileRef = CB594E3016ACD6240034A366 /* font09.fnt */; };
 		CB594E3316ACD6250034A366 /* font09.png in Resources */ = {isa = PBXBuildFile; fileRef = CB594E3116ACD6240034A366 /* font09.png */; };
 		CB684BD016A3D3010007B9AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB684BCF16A3D3000007B9AA /* QuartzCore.framework */; };
@@ -217,6 +219,7 @@
 		CB684E7616A3D3040007B9AA /* HttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB684E7516A3D3040007B9AA /* HttpClient.cpp */; };
 		CB684E7F16A3D3040007B9AA /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB684E7E16A3D3040007B9AA /* AppDelegate.cpp */; };
 		CB684E8216A3D3040007B9AA /* game_bj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB684E8116A3D3040007B9AA /* game_bj.cpp */; };
+		CB71D87816B3A88B0005934F /* obj_boss.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB71D87616B3A88B0005934F /* obj_boss.cpp */; };
 		CB8D194916A55C23006F5CAC /* sunny_01.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB8D194816A55C23006F5CAC /* sunny_01.plist */; };
 		CB8D3E0516AC129600B2D2A5 /* get_coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = CB8D3E0416AC129600B2D2A5 /* get_coin.wav */; };
 		CB8D3E0916AC14D800B2D2A5 /* dragon_flight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CB8D3E0716AC14D800B2D2A5 /* dragon_flight.mp3 */; };
@@ -243,6 +246,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB0F8B2416B55FB0005566E9 /* speedup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speedup.png; sourceTree = "<group>"; };
 		CB13472716B0C9C600595827 /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
 		CB13472816B0C9C600595827 /* filestream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filestream.h; sourceTree = "<group>"; };
 		CB13472A16B0C9C600595827 /* pow10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pow10.h; sourceTree = "<group>"; };
@@ -262,6 +266,7 @@
 		CB470C5616AEDB3800D74C5A /* alert_big.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alert_big.wav; sourceTree = "<group>"; };
 		CB4A94A016AFC29800F54ABF /* avata_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avata_1.png; sourceTree = "<group>"; };
 		CB5136BE16AF82F900377E2D /* Space2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Space2.png; sourceTree = "<group>"; };
+		CB54492116B644AB00369443 /* item_invincible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item_invincible.png; sourceTree = "<group>"; };
 		CB594E3016ACD6240034A366 /* font09.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = font09.fnt; path = Resources/test/font09.fnt; sourceTree = "<group>"; };
 		CB594E3116ACD6240034A366 /* font09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = font09.png; path = Resources/test/font09.png; sourceTree = "<group>"; };
 		CB684BCB16A3D3000007B9AA /* attack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = attack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -704,6 +709,8 @@
 		CB684E7E16A3D3040007B9AA /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		CB684E8016A3D3040007B9AA /* game_bj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = game_bj.h; path = Classes/game_bj.h; sourceTree = "<group>"; };
 		CB684E8116A3D3040007B9AA /* game_bj.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = game_bj.cpp; path = Classes/game_bj.cpp; sourceTree = "<group>"; };
+		CB71D87616B3A88B0005934F /* obj_boss.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = obj_boss.cpp; path = Classes/obj_boss.cpp; sourceTree = "<group>"; };
+		CB71D87716B3A88B0005934F /* obj_boss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = obj_boss.h; path = Classes/obj_boss.h; sourceTree = "<group>"; };
 		CB8D194816A55C23006F5CAC /* sunny_01.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sunny_01.plist; sourceTree = "<group>"; };
 		CB8D3E0416AC129600B2D2A5 /* get_coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = get_coin.wav; path = Resources/test/get_coin.wav; sourceTree = "<group>"; };
 		CB8D3E0716AC14D800B2D2A5 /* dragon_flight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dragon_flight.mp3; path = Resources/test/dragon_flight.mp3; sourceTree = "<group>"; };
@@ -830,6 +837,8 @@
 		CB684BE016A3D3010007B9AA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CB54492116B644AB00369443 /* item_invincible.png */,
+				CB0F8B2416B55FB0005566E9 /* speedup.png */,
 				CB4A94A016AFC29800F54ABF /* avata_1.png */,
 				CB5136BE16AF82F900377E2D /* Space2.png */,
 				CB470C5616AEDB3800D74C5A /* alert_big.wav */,
@@ -1709,6 +1718,8 @@
 				CBA5B1BE16AD43D700B0925F /* cj_2.h */,
 				CB470C4F16AE9EEF00D74C5A /* meteo.cpp */,
 				CB470C5016AE9EEF00D74C5A /* meteo.h */,
+				CB71D87616B3A88B0005934F /* obj_boss.cpp */,
+				CB71D87716B3A88B0005934F /* obj_boss.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1798,6 +1809,8 @@
 				CB470C5716AEDB3800D74C5A /* alert_big.wav in Resources */,
 				CB5136BF16AF82F900377E2D /* Space2.png in Resources */,
 				CB4A94A116AFC29800F54ABF /* avata_1.png in Resources */,
+				CB0F8B2516B55FB0005566E9 /* speedup.png in Resources */,
+				CB54492216B644AB00369443 /* item_invincible.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1997,6 +2010,7 @@
 				CBA5B1BB16AD43AF00B0925F /* cj_1.cpp in Sources */,
 				CBA5B1BF16AD43D700B0925F /* cj_2.cpp in Sources */,
 				CB470C5116AE9EF000D74C5A /* meteo.cpp in Sources */,
+				CB71D87816B3A88B0005934F /* obj_boss.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

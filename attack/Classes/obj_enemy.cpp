@@ -76,7 +76,7 @@ bool obj_enemy::init()
         CCSprite *sprite_enemy_wind_a = new CCSprite();
         sprite_enemy_wind_a->initWithFile(dragon_img);
         sprite_enemy_wind_a->setTextureRect(CCRectMake(SPRITE_ENEMY_WIND_RET[0], SPRITE_ENEMY_WIND_RET[1], SPRITE_ENEMY_WIND_RET[2], SPRITE_ENEMY_WIND_RET[3]));
-        sprite_enemy_wind_a->setPosition(ccp((SCREEN_WIDTH/ENEMY_MEMBER_MAX*(i-1)+15), SCREEN_HIGH));
+        sprite_enemy_wind_a->setPosition(ccp((SCREEN_WIDTH/ENEMY_MEMBER_MAX*(i-1)+11), SCREEN_HIGH));
         sprite_enemy_wind_a->setScale(global_scale);
         layer_m->addChild(sprite_enemy_wind_a, 0, id+100);
         
@@ -85,7 +85,7 @@ bool obj_enemy::init()
         sprite_enemy_wind_b->initWithFile(dragon_img);
         sprite_enemy_wind_b->setTextureRect(CCRectMake(SPRITE_ENEMY_WIND_RET[0], SPRITE_ENEMY_WIND_RET[1], SPRITE_ENEMY_WIND_RET[2], SPRITE_ENEMY_WIND_RET[3]));
         sprite_enemy_wind_b->setFlipX(true);
-        sprite_enemy_wind_b->setPosition( ccp((SCREEN_WIDTH/ENEMY_MEMBER_MAX*(i-1)+45), SCREEN_HIGH));
+        sprite_enemy_wind_b->setPosition( ccp((SCREEN_WIDTH/ENEMY_MEMBER_MAX*(i-1)+52), SCREEN_HIGH));
         sprite_enemy_wind_b->setScale(global_scale);
         layer_m->addChild(sprite_enemy_wind_b, 0, id+200);
         
@@ -114,10 +114,10 @@ bool obj_enemy::init()
         CCFiniteTimeAction *action_body_1 = CCMoveTo::create(ENEMY_SPEED,ccp((SCREEN_WIDTH/ENEMY_MEMBER_MAX*(i-1)+30),0));
         sprite_enemy_body->runAction(action_body_1);
 
-        CCFiniteTimeAction *action_wind_a = CCMoveTo::create(ENEMY_SPEED,ccp((SCREEN_WIDTH/ENEMY_MEMBER_MAX*(i-1)+15),0));
+        CCFiniteTimeAction *action_wind_a = CCMoveTo::create(ENEMY_SPEED,ccp((SCREEN_WIDTH/ENEMY_MEMBER_MAX*(i-1)+11),0));
         sprite_enemy_wind_a->runAction(action_wind_a);
         
-        CCFiniteTimeAction *action_wind_b = CCMoveTo::create(ENEMY_SPEED,ccp((SCREEN_WIDTH/ENEMY_MEMBER_MAX*(i-1)+45),0));
+        CCFiniteTimeAction *action_wind_b = CCMoveTo::create(ENEMY_SPEED,ccp((SCREEN_WIDTH/ENEMY_MEMBER_MAX*(i-1)+52),0));
         sprite_enemy_wind_b->runAction(action_wind_b);
         
         CCFiniteTimeAction *action_eye_a = CCMoveTo::create(ENEMY_SPEED,ccp((SCREEN_WIDTH/ENEMY_MEMBER_MAX*(i-1)+24),6));

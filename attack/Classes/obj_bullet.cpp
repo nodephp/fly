@@ -44,102 +44,11 @@ bool obj_bullet::init(CCSprite *sprite_myself_body)
     int id=0;
     for (int ii=0; ii<=11; ii++)
     {
-        if(ii==0)
+        if(BULLET_STAT[ii] == 1)
         {
-            if(BULLET_A == 1)
-            {
-                id = BULLET_ID[ii];
-                BULLET_A = 2;
-                break;
-            }
-        }else if(ii==1)
-        {
-            if(BULLET_B == 1)
-            {
-                id = BULLET_ID[ii];
-                BULLET_B = 2;
-                break;
-            }
-        }else if(ii==2)
-        {
-            if(BULLET_C == 1)
-            {
-                id = BULLET_ID[ii];
-                BULLET_C = 2;
-                break;
-            }
-        }else if(ii==3)
-        {
-            if(BULLET_D == 1)
-            {
-                id = BULLET_ID[ii];
-                BULLET_D = 2;
-                break;
-            }
-        }else if(ii==4)
-        {
-            if(BULLET_E == 1)
-            {
-                id = BULLET_ID[ii];
-                BULLET_E = 2;
-                break;
-            }
-        }else if(ii==5)
-        {
-            if(BULLET_F == 1)
-            {
-                id = BULLET_ID[ii];
-                BULLET_F = 2;
-                break;
-            }
-        }else if(ii==6)
-        {
-            if(BULLET_G == 1)
-            {
-                id = BULLET_ID[ii];
-                BULLET_G = 2;
-                break;
-            }
-        }else if(ii==7)
-        {
-            if(BULLET_H == 1)
-            {
-                id = BULLET_ID[ii];
-                BULLET_H = 2;
-                break;
-            }
-        }else if(ii==8)
-        {
-            if(BULLET_I == 1)
-            {
-                id = BULLET_ID[ii];
-                BULLET_I = 2;
-                break;
-            }
-        }else if(ii==9)
-        {
-            if(BULLET_J == 1)
-            {
-                id = BULLET_ID[ii];
-                BULLET_J = 2;
-                break;
-            }
-        }else if(ii==10)
-        {
-            if(BULLET_K == 1)
-            {
-                id = BULLET_ID[ii];
-                BULLET_K = 2;
-                break;
-            }
-        }else if(ii==11)
-        {
-            if(BULLET_L == 1)
-            {
-                id = BULLET_ID[ii];
-                BULLET_L = 2;
-                break;
-            }
+            id = BULLET_ID[ii];
+            BULLET_STAT[ii] = 2;
+            break;
         }
     }
     

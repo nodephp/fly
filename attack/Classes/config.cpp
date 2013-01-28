@@ -33,20 +33,9 @@ char *MUSIC_ALERT_RESOURCE                   = "alert_big.wav";
 
 
 float BULLET_SPEED                                = 0.1;
-int BULLET_A                                      = 1;
-int BULLET_B                                      = 1;
-int BULLET_C                                      = 1;
-int BULLET_D                                      = 1;
-int BULLET_E                                      = 1;
-int BULLET_F                                      = 1;
-int BULLET_G                                      = 1;
-int BULLET_H                                      = 1;
-int BULLET_I                                      = 1;
-int BULLET_J                                      = 1;
-int BULLET_K                                      = 1;
-int BULLET_L                                      = 1;
+int BULLET_STAT[12]                               = {1,1,1,1,1,1,1,1,1,1,1,1};
 int BULLET_ID[12]                                 = {101,102,103,104,105,106,107,108,109,110,111,112};
-int BULLET_FORCE                                  = 5;
+int BULLET_FORCE                                  = 10;
 
 int ENEMY_ID[15]                                  = {10001,10002,10003,10004,10005,10006,
                                                     10007,10008,10009,10010,10011,10012,
@@ -61,24 +50,30 @@ int ENEMY_MEMBER_SUM_MAX                          = 15;
 int ENEMY_STAT[15]                                = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
 int ENEMY_SPEED                                   = 2;
 
-int SPRITE_ENEMY_BODY_RET[4]                      = {0, 0, 85, 190};
-int SPRITE_ENEMY_WIND_RET[4]                      = {85, 50, 60, 70};
+int SPRITE_ENEMY_BODY_RET[4]                      = {0,0,39,60};
+int SPRITE_ENEMY_WIND_RET[4]                      = {45,28,16,31};
 int SPRITE_ENEMY_EYES_A_RET[4]                    = {110, 10, 10, 20};
 int SPRITE_ENEMY_EYES_B_RET[4]                    = {};
 
 
 
+int MYSELF_HP                                     = 100;
+int MYSELF_HP_ID                                  = 100;
 int SPRITE_MYSELF_BODY                            = 1;
 int SPRITE_MYSELF_BODY_RET[4]                     = {0,0,25,60};
-int SPRITE_MYSELF_BODY_POSITION[2]                = {100,40};
+int SPRITE_MYSELF_BODY_POSITION[2]                = {160,80};
 
 int SPRITE_MYSELF_WIND_A                          = 2;
 int SPRITE_MYSELF_WIND_A_RET[4]                   = {28,0,35,24};
-int SPRITE_MYSELF_WIND_A_POSITION[2]              = {100,35};
+int SPRITE_MYSELF_WIND_A_POSITION[2]              = {160,75};
 
 int SPRITE_MYSELF_WIND_B                          = 3;
 int SPRITE_MYSELF_WIND_B_RET[4]                   = {28,0,35,24};
-int SPRITE_MYSELF_WIND_B_POSITION[2]              = {100,35};
+int SPRITE_MYSELF_WIND_B_POSITION[2]              = {160,75};
+
+
+//BOSS
+int SPRITE_BOSS_ID                                = 50000;
 
 
 
@@ -90,6 +85,13 @@ int SPRITE_METEO_LIZI                             = 22;
 
 
 
+//背景速度
+int back_ground_speed          = 5;
+
+
+//关卡
+int s_1_p_1_max_km             = 10000;
+int s_1_p_1_enemy_speed        = 3;
 
 
 
@@ -99,6 +101,7 @@ int SPRITE_METEO_LIZI                             = 22;
 
 
 
-
-
+//玩法
+int sprite_speed_up_id       = 998;
+bool speed_up_stat           = false;
 

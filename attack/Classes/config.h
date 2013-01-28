@@ -37,18 +37,7 @@ extern char *MUSIC_ENEMY_HITTED_RESOURCE;
 extern char *MUSIC_ALERT_RESOURCE;
 
 extern float BULLET_SPEED;
-extern int BULLET_A;
-extern int BULLET_B;
-extern int BULLET_C;
-extern int BULLET_D;
-extern int BULLET_E;
-extern int BULLET_F;
-extern int BULLET_G;
-extern int BULLET_H;
-extern int BULLET_I;
-extern int BULLET_J;
-extern int BULLET_K;
-extern int BULLET_L;
+extern int BULLET_STAT[12];
 extern int BULLET_FORCE;
 extern int BULLET_ID[12];
 
@@ -65,6 +54,8 @@ extern int SPRITE_ENEMY_WIND_RET[4];
 extern int SPRITE_ENEMY_EYES_A_RET[4];
 extern int SPRITE_ENEMY_EYES_B_RET[4];
 
+extern int MYSELF_HP;
+extern int MYSELF_HP_ID;
 extern int SPRITE_MYSELF_BODY;
 extern int SPRITE_MYSELF_BODY_RET[4];
 extern int SPRITE_MYSELF_BODY_POSITION[2];
@@ -77,11 +68,21 @@ extern int SPRITE_MYSELF_WIND_B;
 extern int SPRITE_MYSELF_WIND_B_RET[4];
 extern int SPRITE_MYSELF_WIND_B_POSITION[2];
 
+extern int SPRITE_BOSS_ID;
+
+
 extern int SPRITE_METEO;
 extern int SPRITE_M_LINE;
 extern int SPRITE_METEO_LIZI;
 
+extern int back_ground_speed;
 
+extern int s_1_p_1_max_km;
+extern int s_1_p_1_enemy_speed;
+
+
+extern int sprite_speed_up_id;
+extern bool speed_up_stat;
 
 
 
